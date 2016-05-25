@@ -35,64 +35,59 @@
             <div class="hpanel">
 
                 <div class="panel-body list">
+
+                    <button class="btn btn-outline btn-danger" type="button" ng-click="openModal3('lg')"><i class="fa fa-plus"></i> <span class="bold">添加设备</span></button>
+
                     <div class="table-responsive project-list">
                         <table class="table table-striped">
 
                             <thead>
                             <tr>
-                                <th width="8%">用户名</th>
+                                <th>用户名</th>
                                 <th>真实信息</th>
                                 <th>联系电话</th>
                                 <th>联系人</th>
                                 <th>省份</th>
                                 <th>城市</th>
                                 <th>区域</th>
-                                <th>具体地址</th>
-                                <th>帐号状态</th>
-                                <th>可查看设备</th>
                                 <th>创建时间</th>
+                                <th>操作</th>
                             </tr>
                             </thead>
+
                             <tbody>
                             <tr>
-                                <td>UserName</td>
+                                <td><i class="fa fa-toggle-off text-16"></i> UserName</td>
                                 <td>信息信息信息</td>
                                 <td>0512-5252564456</td>
                                 <td>某某</td>
                                 <td>xxx省</td>
                                 <td>xxx市</td>
                                 <td>某某区</td>
-                                <td>详细地址地址地址地址</td>
-                                <td><i class="fa fa-toggle-off text-16"></i></i></td>
-                                <td>abcd</td>
-                                <td>2016-05-01</td>
+                                <td>2016-05-01 12:00:45</td>
+                                <td>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_ma01()" title="密码重置"><i class="fa fa-key"></i></button>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_ma02('lg')" title="查看详情"><i class="fa fa-eye text-info"></i></button>
+                                    <button class="btn btn-default" title="删除"><i class="fa fa-trash text-off"></i></button>
+                                </td>
                             </tr>
                             <tr>
-                                <td>UserName</td>
+                                <td><i class="fa fa-toggle-on text-success text-16"></i> UserName</td>
                                 <td>信息信息信息</td>
                                 <td>0512-5252564456</td>
                                 <td>某某</td>
                                 <td>xxx省</td>
                                 <td>xxx市</td>
                                 <td>某某区</td>
-                                <td>详细地址地址地址地址</td>
-                                <td><i class="fa fa-toggle-on text-success text-16"></i></td>
-                                <td>abcd</td>
-                                <td>2016-05-01</td>
+                                <td>2016-05-01 12:00:45</td>
+                                <td>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_ma01('lg')" title="密码重置"><i class="fa fa-key"></i></button>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_ma02('lg')" title="查看详情"><i class="fa fa-eye text-info"></i></button>
+                                    <button class="btn btn-default" ng-click="openModal_ma03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>UserName</td>
-                                <td>信息信息信息</td>
-                                <td>0512-5252564456</td>
-                                <td>某某</td>
-                                <td>xxx省</td>
-                                <td>xxx市</td>
-                                <td>某某区</td>
-                                <td>详细地址地址地址地址</td>
-                                <td><i class="fa fa-toggle-on text-success text-16"></i></td>
-                                <td>abcd</td>
-                                <td>2016-05-01</td>
-                            </tr>
+
+                            </tbody>
 
                         </table>
 

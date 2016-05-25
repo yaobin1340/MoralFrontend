@@ -1,9 +1,4 @@
 #logo{float: left; width: 180px;height:56px;padding:0 !important}
-ul,li{padding:0;margin:0;list-style:none}
-
-ul,li,div{overflow:hidden; zoom: 1}
-ul:after,li:after{display:table; content: ""; width: 0; clear: both}
-
 .hr-line-dashed {
     background-color: transparent;
     border-top: 1px dotted #f1f3f6;
@@ -19,21 +14,12 @@ ul:after,li:after{display:table; content: ""; width: 0; clear: both}
     padding: 0;
     width:220px}
 
-.fixed-footer .footer {
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    left: 181px;
-    right: 0;
-}
-
 .user-name{font-weight:bold;font-size:14px;line-height:28px}
 
-
-/*-搜索-*/
+/*-设备列表页相关-*/
+.search-box,.search-box li{overflow:hidden!important;zoom:1!important;list-style:none;padding:0;margin:0}
 .search-box{padding:8px 0 0 0}
-.search-box>li{padding-right:0;padding-left:0;margin-bottom:15px}
-.search-box>li>div>{padding:0}
+.search-box>li{margin-bottom:15px}
 .search-box>li>div>p{line-height:34px}
 .search-box>li>label{text-align:left!important}
 .search-box p{padding:0}
@@ -47,12 +33,15 @@ ul:after,li:after{display:table; content: ""; width: 0; clear: both}
     padding: 6px 4px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;
+    color:#555;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.equip-title{padding:10px 12px 0 12px;overflow:hidden;zoom:1;border-top:1px dotted #efefff;border-bottom:1px dotted #efefff}
+.equip-title>p{line-height:36px}
+.equip-title>p>i{padding-top:10px}
 
 /*-设备管理列表-*/
 .list-box1{}
@@ -60,7 +49,9 @@ ul:after,li:after{display:table; content: ""; width: 0; clear: both}
 .list-box1>li>label{text-align:left!important}
 
 
-
 /*-字体-*/
 .text-16{font-size:16px}
 .text-18{font-size:18px}
+.text-gray{color:gray}
+.text-off{color:#d3d3d3;cursor:crosshair}
+.text-gainsboro{color:gainsboro}

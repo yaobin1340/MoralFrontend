@@ -112,22 +112,19 @@
 
                             </ul>
 
-                            <div class="btn-box">
-                                <div class="col-lg-4">
-                                    <button class="btn w-xs btn-success col-md-offset-2" type="button"> <i class="fa fa-search"></i> <span class="bold">搜索</span></button>
-                                    <button class="btn w-xs btn-default" type= type="button">重置</button>
-                                </div>
-                            </div>
+                            <ul class="search-box">
+                                <li class="col-lg-4">
+                                    <div class="col-lg-10 col-lg-offset-2"> <button class="btn w-xs btn-success" type="button"> <i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+                                    <button class="btn w-xs btn-default" type= type="button">重置</button></div>
+                                </li>
+                            </ul>
 
                         </form>
 
-                        <ul>
-                            <li class="text-16 pull-left"><i class="fa fa-list text-18 pull-left" style="padding-top:3px"></i> 共有<span class="text-16 text-success">100</span>条记录</span></li>
-                            <li><button class="btn btn-danger pull-right" type="button" ng-click="openModal3('lg')"><i class="fa fa-plus"></i> <span class="bold">添加设备</span></button></li>
-                        </ul>
-
-                        <div class="hr-line-dashed"></div>
-
+                        <div class="equip-title">
+                            <p class="text-16 pull-left"><i class="fa fa-list text-18 pull-left"></i> 共有<span class="text-16 text-success">100</span>条记录</span></p>
+                            <p class="pull-right"><button class="btn btn-outline btn-danger" type="button" ng-click="openModal3('lg')"><i class="fa fa-plus"></i> <span class="bold">添加设备</span></button></p>
+                        </div>
                         <div class="table-responsive project-list">
                             <table class="table table-striped">
                                 <thead>
@@ -158,7 +155,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -170,15 +167,13 @@
                                     <td>ms-ccc</td>
                                     <td>
                                         <button class="btn btn-default" data-toggle="modal" ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-default" style="cursor:crosshair"><i class="fa fa-trash text-muted"></i></button>
+                                        <button class="btn btn-default"><i class="fa fa-trash text-muted text-off"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>no.5654</td>
                                     <td><i class="fa fa-toggle-on text-success text-16"></i></td>
-                                    <td>
-                                        ms-bdsdfds
-                                    </td>
+                                    <td> ms-bdsdfds</td>
                                     <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
                                     <td>xxxx公司</td>
                                     <td>ms-ddd</td>
@@ -188,7 +183,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -206,7 +201,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -224,7 +219,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -242,7 +237,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -260,7 +255,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -278,7 +273,7 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -296,9 +291,10 @@
                                                 ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
 
                                         <button class="btn btn-default" ng-click="openModal2()"><i
-                                                class="fa fa-trash text-warning"></i></button>
+                                                class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
+                                </tbody>
                             </table>
                         </div>
 

@@ -49,50 +49,13 @@ angular
                     closeOnCancel: false },
                 function (isConfirm) {
                     if (isConfirm) {
-                        sweetAlert.swal("删除!", "您选中的设备已删除.", "success");
+                        sweetAlert.swal("删除!", "设备已删除.", "success");
                     } else {
-                        sweetAlert.swal("取消", "您的设备已继续保留 :)", "error");
+                        sweetAlert.swal("取消", "设备继续保留 :)", "error");
                     }
                 });
     	}
 
-        /**
-         * Data for Doughnut chart
-         */
-        $scope.doughnutData = [
-            {
-                value: 20,
-                color:"#62cb31",
-                highlight: "#57b32c",
-                label: "App"
-            },
-            {
-                value: 120,
-                color: "#91dc6e",
-                highlight: "#57b32c",
-                label: "Software"
-            },
-            {
-                value: 100,
-                color: "#a3e186",
-                highlight: "#57b32c",
-                label: "Laptop"
-            }
-        ];
-
-        /**
-         * Options for Doughnut chart
-         */
-        $scope.doughnutOptions = {
-            segmentShowStroke : true,
-            segmentStrokeColor : "#fff",
-            segmentStrokeWidth : 1,
-            percentageInnerCutout : 45, // This is 0 for Pie charts
-            animationSteps : 100,
-            animationEasing : "easeOutBounce",
-            animateRotate : true,
-            animateScale : false
-        };
 
         function ModalInstanceCtrl ($scope, $modalInstance) {
             $scope.ok = function () {
