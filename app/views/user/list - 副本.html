@@ -1,0 +1,142 @@
+<!-- Header -->
+<title xmlns="http://www.w3.org/1999/html">七星博士环境质量管理系统</title>
+
+<div id="header" ng-include="'views/common/header.html'"></div>
+
+<!-- Navigation -->
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+
+    <div small-header="" class="small-header ng-scope">
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="dashboard" href="#/dashboard">首页</a></li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">用户管理</span>
+                        </li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope active">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">管理列表</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs ng-binding">
+                    管理列表
+                </h2>
+                <small class="ng-binding">Management list</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" animate-panel effect="zoomIn">
+
+
+        <div class="row">
+
+            <div class="col-lg-8">
+
+                <div class="hpanel">
+
+                     <div class="panel-body">
+
+                        <form method="get" class="form-horizontal">
+
+                            <ul class="list-box1">
+
+                                <li class="col-lg-6">
+                                    <label class="col-lg-4 control-label">用户</label>
+                                    <div class="col-lg-8 search-text">sssss</div>
+                                </li>
+
+                                <li class="col-lg-6">
+                                    <label class="col-lg-4 control-label">状态</label>
+                                    <div class="col-lg-8 search-text">
+                                        <select class="form-control" name="省份">
+                                            <option>已使用</option>
+                                            <option>未使用</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                <li class="col-lg-6">
+                                    <label class="col-lg-4 control-label">省份</label>
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="省份">
+                                            <option>江苏省</option>
+                                            <option>xx省</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                <li class="col-lg-6">
+
+                                    <label class="col-lg-4 control-label">城市</label>
+
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="省份">
+                                            <option>江苏省</option>
+                                            <option>xx省</option>
+                                        </select>
+                                    </div>
+
+                                </li>
+
+                                <li class="col-lg-12">
+                                    <label class="col-lg-2 control-label">安装地址</label>
+                                    <div class="col-lg-10">bbbbbbbbbbb</div>
+                                </li>
+
+                                <li class="col-lg-12">
+                                    <label class="col-lg-2 control-label">Mac地址</label>
+                                    <div class="col-lg-10">bbbbbbbbbbb</div>
+                                </li>
+
+                            </ul>
+
+                            <button class="btn w-xs btn-success" type="button"><i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+                        </form>
+
+                     </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="hpanel hgreen">
+                    <div class="panel-body">
+                        <div class="pull-right text-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline btn-success"><i class="fa fa-pencil"></i> 帐号设置</button>
+                            </div>
+                        </div>
+                        <img alt="logo" class="img-circle m-b m-t-md" src="images/profile.jpg">
+                        <h3><a href="">用户名</a></h3>
+                        <div class="text-muted font-bold m-b-xs">真实姓名：</div>
+                        <p>
+                           sssss
+                        </p>
+                        <div class="progress-small full progress-striped active progress ng-isolate-scope" value="65" type="success">
+                            <div class="progress-bar progress-bar-success" ng-class="type &amp;&amp; 'progress-bar-' + type" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (percent < 100 ? percent : 100) + '%'}" aria-valuetext="65%" aria-labelledby="progressbar" ng-transclude="" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+         </div>
+
+
+
+    </div>
+
+    <!-- Right sidebar -->
+    <div id="right-sidebar" ng-include="'views/common/right_sidebar.html'" class="sidebar-open" ng-show="rightSidebar"></div>
+
+    <!-- Footer -->
+    <footer class="footer" ng-include="'views/common/footer.html'"></footer>
+
+</div>

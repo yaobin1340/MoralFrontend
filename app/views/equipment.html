@@ -1,0 +1,333 @@
+<!-- Header -->
+<title xmlns="http://www.w3.org/1999/html">七星博士环境质量管理系统</title>
+
+<div id="header" ng-include="'views/common/header.html'"></div>
+
+<!-- Navigation -->
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+
+    <div small-header="" class="small-header ng-scope">
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="dashboard" href="#/dashboard">首页</a></li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope active">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">设备列表</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs ng-binding">
+                    设备列表
+                </h2>
+                <small class="ng-binding">Equipment list</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" animate-panel effect="zoomIn">
+
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="hpanel">
+
+                    <div class="panel-body">
+
+                        <!--搜索-->
+                        <form method="get" class="form-horizontal">
+
+                            <ul class="search-box">
+
+                                <li class="col-lg-4">
+                                    <label class="col-lg-2 control-label">编号</label>
+                                    <div class="col-lg-10"> <input type="text" class="form-control"></div>
+                                </li>
+
+                                <li class="col-lg-4">
+                                    <label class="col-lg-2 control-label">类别</label>
+                                    <div class="col-lg-10">
+                                        <select class="form-control" name="类别">
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                <li class="col-lg-4">
+                                    <label class="col-lg-2 control-label">状态</label>
+                                    <div class="col-lg-10">
+                                        <select class="form-control" name="状态">
+                                            <option>已使用</option>
+                                            <option>未使用</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                <li class="col-lg-4">
+                                    <label class="col-lg-2 control-label">范围</label>
+                                    <div class="col-lg-10">
+                                        <p class="col-lg-4">
+                                            <select class="form-control2 pull-right" name="省" style="width:100%">
+                                                <option>江苏省</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                                <option>option 4</option>
+                                            </select>
+                                        </p>
+                                        <p class="col-lg-4">
+                                            <select class="form-control2 pull-right" name="市、地区">
+                                                <option>昆山市</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                                <option>option 4</option>
+                                            </select>
+                                        </p>
+                                        <p class="col-lg-4">
+                                            <select class="form-control2 pull-right" name="县、街道">
+                                                <option>玉山镇</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                                <option>option 4</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="col-lg-4">
+                                    <label class="col-lg-2 control-label">地址</label>
+                                    <div class="col-lg-10"><input type="text" class="form-control"></div>
+                                </li>
+
+                                <li class="col-lg-4">
+                                    <label class="col-lg-2 control-label">企业</label>
+                                    <div class="col-lg-10"><input type="text" class="form-control"></div>
+                                </li>
+
+                            </ul>
+
+                            <div class="btn-box">
+                                <div class="col-lg-4">
+                                    <button class="btn w-xs btn-success col-md-offset-2" type="button"> <i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+                                    <button class="btn w-xs btn-default" type= type="button">重置</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <ul>
+                            <li class="text-16 pull-left"><i class="fa fa-list text-18 pull-left" style="padding-top:3px"></i> 共有<span class="text-16 text-success">100</span>条记录</span></li>
+                            <li><button class="btn btn-danger pull-right" type="button" ng-click="openModal3('lg')"><i class="fa fa-plus"></i> <span class="bold">添加设备</span></button></li>
+                        </ul>
+
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="table-responsive project-list">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+
+                                    <th width="8%">编号</th>
+                                    <th width="7%">设备状态</th>
+                                    <th width="20%">Mac地址</th>
+                                    <th width="32%">地址</th>
+                                    <th width="13%">企业</th>
+                                    <th width="8%">类别</th>
+                                    <th width="12%">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>no.548</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-off text-16"></i></td>
+                                    <td>ms-bdsccc</td>
+                                    <td>暂无信息</td>
+                                    <td>暂无信息</td>
+                                    <td>ms-ccc</td>
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal" ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-default" style="cursor:crosshair"><i class="fa fa-trash text-muted"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.5654</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>no.486</td>
+                                    <td><i class="fa fa-toggle-on text-success text-16"></i></td>
+                                    <td>
+                                        ms-bdsdfds
+                                    </td>
+                                    <td><p><strong>江苏省昆山市XXXXXXX</strong></p></td>
+                                    <td>xxxx公司</td>
+                                    <td>ms-ddd</td>
+
+                                    <td>
+                                        <button class="btn btn-default" data-toggle="modal"
+                                                ng-click="openModal('lg')"><i class="fa fa-pencil"></i></button>
+
+                                        <button class="btn btn-default" ng-click="openModal2()"><i
+                                                class="fa fa-trash text-warning"></i></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                            <button class="btn btn-default">1</button>
+                            <button class="btn btn-default  active">2</button>
+                            <button class="btn btn-default">3</button>
+                            <button class="btn btn-default">4</button>
+                            <button class="btn btn-default">5</button>
+                            <button class="btn btn-default">6</button>
+                            <button class="btn btn-default">7</button>
+                            <button class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <div id="right-sidebar" ng-include="'views/common/right_sidebar.html'" class="sidebar-open" ng-show="rightSidebar"></div>
+
+    <!-- Footer -->
+    <footer class="footer" ng-include="'views/common/footer.html'"></footer>
+
+</div>

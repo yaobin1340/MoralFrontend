@@ -1,0 +1,66 @@
+#logo{float: left; width: 180px;height:56px;padding:0 !important}
+ul,li{padding:0;margin:0;list-style:none}
+
+ul,li,div{overflow:hidden; zoom: 1}
+ul:after,li:after{display:table; content: ""; width: 0; clear: both}
+
+.hr-line-dashed {
+    background-color: transparent;
+    border-top: 1px dotted #f1f3f6;
+    color: transparent;
+    height: 1px;
+    margin: 20px 0;
+    clear:both
+}
+
+.navbar-adv{
+    float: left;
+    height: 52px;line-height:52px;
+    padding: 0;
+    width:220px}
+
+.fixed-footer .footer {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 181px;
+    right: 0;
+}
+
+.user-name{font-weight:bold;font-size:14px;line-height:28px}
+
+
+/*-搜索-*/
+.search-box{padding:8px 0 0 0}
+.search-box>li{padding-right:0;padding-left:0;margin-bottom:15px}
+.search-box>li>div>{padding:0}
+.search-box>li>div>p{line-height:34px}
+.search-box>li>label{text-align:left!important}
+.search-box p{padding:0}
+
+.btn-box{padding:0 0 12px 0;margin-bottom:12px;border-bottom:1px dotted #efefff}
+
+.form-control2{
+    width:90%;display:block;
+    block;box-sizing:
+    height: 34px;
+    padding: 6px 4px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*-设备管理列表-*/
+.list-box1{}
+.list-box1>li{padding:8px 0 8px 8px;border-bottom:1px dotted #efefff}
+.list-box1>li>label{text-align:left!important}
+
+
+
+/*-字体-*/
+.text-16{font-size:16px}
+.text-18{font-size:18px}
