@@ -54,7 +54,7 @@ angular
                         sweetAlert.swal("取消", "设备继续保留 :)", "error");
                     }
                 });
-    	}
+    	};
 
 
         function ModalInstanceCtrl ($scope, $modalInstance) {

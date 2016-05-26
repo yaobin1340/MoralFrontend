@@ -9,10 +9,11 @@ angular
 		var $state = $injector.get( '$state' );
 
 
-        $scope.openModal_ma01 = function () {
+        $scope.openModal_ma01 = function (size) {
             var modalInstance = $modal.open({
                 templateUrl: 'views/modal/modal_ma01.html',
                 controller: ModalInstanceCtrl,
+                size:size
             });
         };
 
@@ -26,7 +27,7 @@ angular
 
         $scope.openModal_ma03 = function () {
             sweetAlert.swal({
-                    title: "要删除此用户信息吗?",
+                    title: "要删除用户信息吗?",
                     text: "被删除的用户信息将XXXX!",
                     type: "warning",
                     showCancelButton: true,
@@ -37,13 +38,41 @@ angular
                     closeOnCancel: false },
                 function (isConfirm) {
                     if (isConfirm) {
-                        sweetAlert.swal("删除!", "用户信息已删除.", "success");
+                        sweetAlert.swal("删除!", "用户信息已删除", "success");
                     } else {
                         sweetAlert.swal("取消", "用户信息继续保留 :)", "error");
                     }
                 });
-        }
+        };
 
+        $scope.openModal_ma04 = function (size) {
+            var modalInstance = $modal.open({
+                templateUrl: 'views/modal/modal_ma04.html',
+                controller: ModalInstanceCtrl,
+                size:size
+            });
+        };
+
+
+        $scope.openModal_ma05 = function () {
+            sweetAlert.swal({
+                    title: "需要重置密码吗?",
+                    text: "重置后的密码将以短信的方式发送至您的手!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "重置",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false,
+                    closeOnCancel: false },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        sweetAlert.swal("已重置!", "密码已重置，请注意查收短信息", "success");
+                    } else {
+                        sweetAlert.swal("取消重置", "继续使用原密码 :)", "error");
+                    }
+                });
+        };
 
         function ModalInstanceCtrl ($scope, $modalInstance) {
             $scope.ok = function () {
