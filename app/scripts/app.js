@@ -26,7 +26,8 @@ angular.module( 'app',
         // 'gridshore.c3js.chart',     // C3 charts
         // 'datatables.buttons',       // Datatables Buttons
         // 'angular-ladda',            // Ladda - loading buttons
-        'ui.codemirror'             // Ui Codemirror
+        'ui.codemirror',             // Ui Codemirror
+        'highcharts-ng'
     ]
 )
     .config( function config( $injector, $locationProvider)
