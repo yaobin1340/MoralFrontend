@@ -1,0 +1,147 @@
+<!-- Header -->
+<title xmlns="http://www.w3.org/1999/html">七星博士环境质量管理系统</title>
+
+<div id="header" ng-include="'views/common/header.html'"></div>
+
+<!-- Navigation -->
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+
+    <div small-header="" class="small-header ng-scope">
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="dashboard" href="#/dashboard">首页</a></li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope active">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">异常设备</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs ng-binding">
+                    异常设备
+                </h2>
+                <small class="ng-binding">Abnormal equipment</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" animate-panel effect="zoomIn">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="hpanel margin-b0">
+                    <div class="panel-body border-b0">
+
+                        <!--搜索-->
+                            <div class="input-group">
+                                <input class="form-control" placeholder="请输入设备Mac地址进行搜索..." type="text">
+                                <div class="input-group-btn">
+
+                                    <button class="btn w-xs btn-success"  type="button"><i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-12">
+
+                <div class="hpanel">
+                    <div class="panel-body">
+
+                        <h5 class="equip-title m-b-lg">
+                           <i class="fa fa-list text-18 pull-left"></i> 共有<span class="text-success">100</span>条记录
+                        </h5>
+
+                        <div class="table-responsive project-list">
+
+                        <table class="table table-striped">
+
+                            <thead>
+                            <tr>
+                                <th width="10%">编号</th>
+                                <th width="20%">Mac地址</th>
+                                <th width="10%">类别</th>
+                                <th width="15%">单位</th>
+                                <th width="25%">描述</th>
+                                <th width="20%">采集时间</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>no.554</td>
+                                <td>mac-5563631232</td>
+                                <td>政府</td>
+                                <td>某某某某单位</td>
+                                <td>在什么什么情况下出现什么什么问题</td>
+                                <td>2016-05-01 12:00:45</td>
+                            </tr>
+
+                            <tr>
+                                <td>no.554</td>
+                                <td>mac-5563631232</td>
+                                <td>政府</td>
+                                <td>某某某某单位</td>
+                                <td>在什么什么情况下出现什么什么问题</td>
+                                <td>2016-05-01 12:00:45</td>
+                            </tr>
+
+                            <tr>
+                                <td>no.554</td>
+                                <td>mac-5563631232</td>
+                                <td>政府</td>
+                                <td>某某某某单位</td>
+                                <td>在什么什么情况下出现什么什么问题</td>
+                                <td>2016-05-01 12:00:45</td>
+                            </tr>
+
+                            <tr>
+                                <td>no.554</td>
+                                <td>mac-5563631232</td>
+                                <td>政府</td>
+                                <td>某某某某单位</td>
+                                <td>在什么什么情况下出现什么什么问题</td>
+                                <td>2016-05-01 12:00:45</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                        <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-default">1</button>
+                        <button class="btn btn-default  active">2</button>
+                        <button class="btn btn-default">3</button>
+                        <button class="btn btn-default">4</button>
+                        <button class="btn btn-default">5</button>
+                        <button class="btn btn-default">6</button>
+                        <button class="btn btn-default">7</button>
+                        <button class="btn btn-default">8</button>
+                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                   </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <div id="right-sidebar" ng-include="'views/common/right_sidebar.html'" class="sidebar-open" ng-show="rightSidebar"></div>
+
+    <!-- Footer -->
+    <footer class="footer" ng-include="'views/common/footer.html'"></footer>
+
+</div>

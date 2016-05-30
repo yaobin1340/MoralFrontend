@@ -95,27 +95,24 @@
                 </li>
             </ul>
             <div class="hr-line-dashed"></div>
+
             <ul class="search-box">
                 <li class="col-lg-12">
                 <label class="control-label col-lg-2">添加设备</label></li>
 
+                <li class="col-lg-4">
 
-                <li class="col-lg-12">
-
-                    <div class="col-lg-12">
                         <select class="form-control pull-right" name="添加设备大类别" ng-model="showSelect">
                             <option value="equipment">设备</option>
                             <option value="area">区域</option>
                             <option value="user">用户</option>
 
                         </select>
-                    </div>
 
                 </li>
 
-                <li class="col-lg-12" ng-show="showSelect === 'area'">
+                <li class="col-lg-8" ng-show="showSelect === 'area'">
 
-                    <div class="col-lg-8">
                         <div class="col-lg-3">
                             <select class="form-control pull-right" name="省">
                                 <option>江苏省</option>
@@ -149,36 +146,27 @@
                             </select>
                         </div>
 
-                    </div>
-
                 </li>
 
-                <li class="col-lg-12" ng-show="showSelect === 'user'">
-
-                    <div class="col-lg-8">
+                <li class="col-lg-8" ng-show="showSelect === 'user'">
 
                         <div class="col-lg-12">
                             <input type="text" class="form-control" placeholder="请输入用户（可输入多个哦）">
                         </div>
-                    </div>
 
                 </li>
 
-                <li class="col-lg-12" ng-show="showSelect === 'equipment'">
-
-                    <div class="col-lg-8">
+                <li class="col-lg-8" ng-show="showSelect === 'equipment'">
 
                         <div class="col-lg-12">
                             <input type="text" class="form-control" placeholder="请输入设备（可输入多个哦）">
                         </div>
-                    </div>
 
                 </li>
 
             </ul>
 
         </form>
-
 
     </div>
 

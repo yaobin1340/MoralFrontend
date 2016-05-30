@@ -1,0 +1,443 @@
+<!-- Header -->
+<title xmlns="http://www.w3.org/1999/html">七星博士环境质量管理系统</title>
+
+<div id="header" ng-include="'views/common/header.html'"></div>
+
+<!-- Navigation -->
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+
+    <div small-header="" class="small-header ng-scope">
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="dashboard" href="#/dashboard">首页</a></li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope active">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">数据中心</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs ng-binding">
+                    数据中心
+                </h2>
+                <small class="ng-binding">Data center</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" animate-panel effect="zoomIn">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="hpanel">
+                    <div class="panel-body">
+
+                        <!--搜索-->
+                            <div class="input-group m-b-lg">
+                                <input class="form-control" placeholder="请输入单位名称进行搜索..." type="text">
+                                <div class="input-group-btn">
+
+                                    <button class="btn w-xs btn-success"  type="button"><i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+
+                                </div>
+                            </div>
+
+                            <h5 class="m-b-md">搜索<span class="text-info">xxx单位</span>结果：共有<span class="text-success">XXX</span>台设备</h5>
+                            <tabset>
+                            <tab>
+                                <tab-heading>MAC_11111</tab-heading>
+                                <div class="panel-body">
+
+                                   <ul class="data_list">
+                                        <li class="col-lg-3 col-sm-3">
+                                            <label class="col-lg-4">用户</label>
+                                            <div class="col-lg-8"><p>UserName</p></div>
+                                        </li>
+                                        <li class="col-lg-3 col-sm-3">
+                                            <label class="col-lg-4">信息</label>
+                                            <div class="col-lg-8"><p>该用户真实信息真实信息真实信息d真实信息sbbffb</p></div>
+                                        </li>
+                                        <li class="col-lg-3 col-sm-3">
+                                            <label class="col-lg-4">类别</label>
+                                            <div class="col-lg-8">
+                                                <p>政府</p>
+                                            </div>
+                                        </li>
+                                        <li class="col-lg-3 col-sm-3">
+                                            <label class="col-lg-4">状态</label>
+                                            <div class="col-lg-8">
+                                                <p>已使用</p>
+                                            </div>
+                                        </li>
+                                        <li class="col-lg-3 col-sm-3">
+                                            <label class="col-lg-4">区域</label>
+                                            <div class="col-lg-8">
+                                                <p>江苏省 昆山市 玉山镇</p>
+                                            </div>
+                                        </li>
+                                        <li class="col-lg-3 col-sm-3">
+                                            <label class="col-lg-4">单位</label>
+                                            <div class="col-lg-8"><p>sdddddddddddddddddddddddddddddddddhhhhhhhhhhhhhhdddds</p></div>
+                                        </li>
+                                        <li class="col-lg-6 col-sm-6">
+                                            <label class="col-lg-2 m-r-n-xs">联系</label>
+                                            <div class="col-lg-10">
+                                                <p>李某某 <i class="fa fa-phone-square text-primary"></i> 0512-54555544</p>
+                                            </div>
+                                        </li>
+
+                                   </ul>
+
+                                   <div class="hr-line-dashed clear"></div>
+
+                                    <div class="row m-b-md">
+                                        <div class="col-lg-6 col-sm-12  col-xs-12 p-right-0">
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <span class="label label-danger">严重超标</span><button class="data_ico" type="button"><i class="fa fa-frown-o text-middle"></i></button><p class="data_i_info"><span>PM2.5</span>
+                                                    24(ug/m³)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <button class="data_ico" type="button"><i class="fa fa-eyedropper text-middle"></i></button><p class="data_i_info"><span>甲醛</span>
+                                                    0.11(mg/m³)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <button class="data_ico" type="button"><i class="fa fa-sun-o text-middle"></i></button><p class="data_i_info"><span>温度</span>
+                                                    21(℃)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <button class="data_ico" type="button"><i class="fa fa-leaf text-middle"></i></button><p class="data_i_info"><span>氧气</span>
+                                                    20.8(%)</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-6 col-sm-12 col-xs-12 p-left-0">
+
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <button class="data_ico" type="button"><i class="fa fa-warning text-middle"></i></button><p class="data_i_info"><span>二氧化硫
+                                    </span>0.108(ppm)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <span class="label label-warning">超标</span> <button class="data_ico" type="button"><i class="fa fa-bell-o text-middle"></i></button><p class="data_i_info"><span>一氧化碳
+                                    </span>9.61(ppm)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <button class="data_ico" type="button"><i class="fa fa-tint text-middle"></i></button><p class="data_i_info"><span>湿度
+                                    </span> 15(%RH)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3 col-xs-6">
+                                                <div class="data_i_box">
+                                                    <button class="data_ico" type="button"><i class="fa fa-bomb text-middle"></i></button><p class="data_i_info"><span>氯气
+                                    </span>0(ppm)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ng-scope">
+
+                                        <div class="col-lg-6">
+                                            <div class="hpanel hgreen">
+                                                <div class="panel-body" style="height:350px">
+
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="hpanel hyellow">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="" class="col-lg-6">
+                                            <div class="hpanel hviolet">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="" class="col-lg-6">
+                                            <div class="hpanel hblue">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="" class="col-lg-6">
+                                            <div class="hpanel hgreen">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="" class="col-lg-6">
+                                            <div class="hpanel hyellow">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="" class="col-lg-6">
+                                            <div class="hpanel hviolet">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="" class="col-lg-6">
+                                            <div class="hpanel hblue">
+                                                <div class="panel-body" style="height:350px">
+                                                    <tabset>
+                                                        <tab>
+                                                            <tab-heading>分时</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>1<br/>1</p>
+                                                            </div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>今日</tab-heading>
+                                                            <div><strong>Donec quam felis</strong>
+                                                                <p>2</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本周</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>3</p></div>
+                                                        </tab>
+                                                        <tab>
+                                                            <tab-heading>本月</tab-heading>
+                                                            <div><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                                                <p>4</p></div>
+                                                        </tab>
+                                                    </tabset>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </tab>
+                            <tab>
+                                <tab-heading>MAC_22222</tab-heading>
+                                <div class="panel-body"><strong>Donec quam felis</strong>
+                                    <p>2</p></div>
+                            </tab>
+                                <tab>
+                                    <tab-heading>MAC_33333</tab-heading>
+                                    <div class="panel-body"><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                        <p>3</p></div>
+                                </tab>
+                                <tab>
+                                    <tab-heading>MAC_44444</tab-heading>
+                                    <div class="panel-body"><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                        <p>4</p></div>
+                                </tab>
+                                <tab>
+                                    <tab-heading>MAC_55555</tab-heading>
+                                    <div class="panel-body"><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                                        <p>5</p></div>
+                                </tab>
+
+                        </tabset>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <div id="right-sidebar" ng-include="'views/common/right_sidebar.html'" class="sidebar-open" ng-show="rightSidebar"></div>
+
+    <!-- Footer -->
+    <footer class="footer" ng-include="'views/common/footer.html'"></footer>
+
+</div>

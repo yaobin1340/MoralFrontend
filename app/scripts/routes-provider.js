@@ -31,6 +31,24 @@ angular
             controller: 'ManagementCtrl'
         };
 
+        this.routes['unusual'] = {
+            url: '/unusual',
+            templateUrl: 'views/unusual.html',
+            data: {
+                pageTitle: 'unusual'
+            },
+            controller: 'UnusualCtrl'
+        };
+
+        this.routes['data'] = {
+            url: '/data',
+            templateUrl: 'views/data.html',
+            data: {
+                pageTitle: 'data'
+            },
+            controller: 'DataCtrl'
+        };
+
         this.routes['userList'] = {
             url: '/user/list',
             templateUrl: 'views/user/list.html',

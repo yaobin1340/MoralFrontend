@@ -58,7 +58,7 @@ angular
         $scope.openModal_ma05 = function () {
             sweetAlert.swal({
                     title: "需要重置密码吗?",
-                    text: "重置后的密码将以短信的方式发送至您的手!",
+                    text: "重置后的密码将以短信的方式发送至您的手机!",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#DD6B55",

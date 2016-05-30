@@ -29,13 +29,19 @@
             <a ui-sref="equipment"><i class="pe-7s-news-paper text-16"></i> <span class="nav-label">设备列表</span><span class="label label-warning pull-right">NEW</span> </a>
         </li>
         <li ui-sref-active="active">
-            <a ui-sref="management"><i class="pe-7s-paper-plane text-16"></i> <span class="nav-label">用户管理</span></a>
+            <a ui-sref="management"><i class="pe-7s-users text-16"></i> <span class="nav-label">用户管理</span></a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="unusual"><i class="pe-7s-help1 text-16"></i> <span class="nav-label">异常设备</span></a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="data"><i class="pe-7s-graph2 text-16"></i> <span class="nav-label">数据中心</span></a>
         </li>
 
         <li ng-class="{'active': $state.includes('app_views') || $state.includes('blog_details')}">
             <a href="#"><i class="pe-7s-paper-plane text-16"></i> <span class="nav-label">菜单4</span><span class="fa arrow"></span> </a>
             <ul class="nav nav-second-level" ng-class="{'in': $state.includes('app_views') || $state.includes('blog_details')}">
-                <li ui-sref-active="active"><a ui-sref="#">1</a></li>
+                <li ui-sref-active="active"><a ui-sref="">1</a></li>
                 <li ui-sref-active="active"><a ui-sref="#">2</a></li>
                 <li ui-sref-active="active"><a ui-sref="#">3</a></li>
             </ul>
