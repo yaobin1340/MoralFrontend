@@ -1,0 +1,157 @@
+<!-- Header -->
+<title xmlns="http://www.w3.org/1999/html">七星博士环境质量管理系统</title>
+
+<div id="header" ng-include="'views/common/header.html'"></div>
+
+<!-- Navigation -->
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+
+    <div small-header="" class="small-header ng-scope">
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="dashboard" href="#/dashboard">首页</a></li>
+                        <li class="ng-scope" ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}">
+                            <span class="ng-binding ng-scope" ng-switch-when="true">用户管理</span>
+                        </li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope active">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">高级用户</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs ng-binding">
+                    高级用户
+                </h2>
+                <small class="ng-binding">Senior User</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" animate-panel effect="zoomIn">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="hpanel margin-b0">
+                    <div class="panel-body border-b0">
+
+                        <!--搜索-->
+                            <div class="input-group col-lg-10 col-sm-10 col-xs-10 pull-left">
+                                <input class="form-control" placeholder="请输入关键字..." type="text">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-2 col-xs-2">
+
+                                <button class="btn w-xs btn-success" style="width:100%" type="button" ng-click="openModal_senior01('lg')"><i class="fa fa-search"></i> <span class="bold">高级搜索</span></button>
+
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-12">
+
+                <div class="hpanel">
+                    <div class="panel-body">
+
+                        <h5 class="management-title m-b-lg p-bottom-0">
+                            <p class="pull-left">
+                                <i class="fa fa-list text-18 pull-left"></i> 共有<span class="text-success">100</span>条记录
+                            </p>
+                            <p class="pull-right">
+                                <button class="btn btn-outline btn-danger" type="button" ng-click="openModal_senior04('lg')"><i class="fa fa-plus"></i> <span class="bold">添加用户</span></button>
+                            </p>
+                        </h5>
+
+                        <div class="table-responsive project-list">
+
+                        <table class="table table-striped">
+
+                            <thead>
+                            <tr>
+                                <th width="10%">用户名</th>
+                                <th width="10%">真实信息</th>
+                                <th width="10%">联系电话</th>
+                                <th width="10%">联系人</th>
+                                <th width="10%">省份</th>
+                                <th width="10%">城市</th>
+                                <th width="10%">区（县）</th>
+                                <th width="12%">创建时间</th>
+                                <th width="18%">操作</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td><i class="fa fa-toggle-off text-16"></i> UserName</td>
+                                <td>信息信息信息信</td>
+                                <td>0512-5252564456</td>
+                                <td>某某</td>
+                                <td>xxx省</td>
+                                <td>xxx市</td>
+                                <td>某某区</td>
+                                <td>2016-05-01 12:00:45</td>
+                                <td>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_senior05()" title="密码重置"><i class="fa fa-key"></i></button>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_senior02('lg')" title="查看详情"><i class="fa fa-pencil text-info"></i></button>
+                                    <button class="btn btn-default" title="删除"><i class="fa fa-trash text-off"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-toggle-on text-success text-16"></i> UserName</td>
+                                <td>信息信息信息</td>
+                                <td>0512-5252564456</td>
+                                <td>某某</td>
+                                <td>xxx省</td>
+                                <td>xxx市</td>
+                                <td>某某区</td>
+                                <td>2016-05-01 12:00:45</td>
+                                <td>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_senior05()" title="密码重置"><i class="fa fa-key"></i></button>
+                                    <button class="btn btn-default" data-toggle="modal" ng-click="openModal_senior02('lg')" title="查看详情"><i class="fa fa-pencil text-info"></i></button>
+                                    <button class="btn btn-default" ng-click="openModal_senior03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                </td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                        <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-default">1</button>
+                        <button class="btn btn-default  active">2</button>
+                        <button class="btn btn-default">3</button>
+                        <button class="btn btn-default">4</button>
+                        <button class="btn btn-default">5</button>
+                        <button class="btn btn-default">6</button>
+                        <button class="btn btn-default">7</button>
+                        <button class="btn btn-default">8</button>
+                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                   </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <div id="right-sidebar" ng-include="'views/common/right_sidebar.html'" class="sidebar-open" ng-show="rightSidebar"></div>
+
+    <!-- Footer -->
+    <footer class="footer" ng-include="'views/common/footer.html'"></footer>
+
+</div>
