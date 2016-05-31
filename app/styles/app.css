@@ -1,5 +1,7 @@
+body{width:100%}
 #logo{float: left; width: 180px;height:56px;padding:0 !important}
 .footer{z-index:200 !important;}
+.note-editable{min-height:200px;max-height:360px;overflow-x:none;overflow-y:scroll}
 .navbar-adv{
     float: left;
     height: 52px;line-height:52px;
@@ -28,6 +30,9 @@ a:focus{outline:none}
 .management-title>p>i{padding-top:10px}
 .list-box1>li{padding:8px 0 8px 8px;border-bottom:1px dotted #efefff}
 .list-box1>li>label{text-align:left!important}
+
+.user_plus{border:1px solid #d9d9d9;box-shadow:0 2px 4px #eee}
+
 
 /*-数据中心-*/
 .data_i_box{width:80px;height:130px;position:relative;left:50%;margin-left:-40px}
@@ -99,6 +104,7 @@ a:focus{outline:none}
 .data_list{list-style:none;padding:0;margin:0;overflow:hidden: ;zoom:1}
 .data_list>li>label{text-align:left!important;line-height:34px;height:34px;overflow:hidden;}
 .data_list p{line-height:34px;height:34px;overflow: hidden}
+
 
 /*-margin和padding和border-*/
 .margin-b0{margin-bottom:0}

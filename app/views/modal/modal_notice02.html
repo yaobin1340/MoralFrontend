@@ -1,49 +1,37 @@
 <div class="modal-content">
     <div class="color-line"></div>
     <div class="modal-header">
-        <div class="p-m">
             <h4 class="modal-title">发布通知</h4>
             <small class="font-bold">Deliver an announcement</small>
-
-        </div>
     </div>
 
     <div class="modal-body">
+        <form method="get" class="form-horizontal">
+        <ul class="search-box">
 
-            <form method="get" class="form-horizontal">
-            <ul class="search-box">
-
-                <li class="col-lg-6 col-md-6">
-                    <label class="col-lg-3 col-md-3 control-label">通知范围：</label>
-                    <div class="col-lg-9 col-md-9">
-                        <select class="form-control" name="类别">
-                            <option>全部</option>
-                            <option>政府</option>
-                            <option>学校</option>
-                            <option>企业</option>
-                        </select>
-                    </div>
-                </li>
-                <li class="col-lg-6 col-md-6">
-                    <label class="col-lg-3 col-md-3 control-label">通知主题</label>
-                    <div class="col-lg-9 col-md-9">
-                        <input type="text" class="form-control" placeholder="请输入通知主题">
-                    </div>
-                </li>
-            </ul>
-            </form>
-        <!--编辑器-->
-        <div class="hpanel">
-            <div class="panel-heading">
-                <div panel-tools></div> Summernote standard editor
-            </div>
-            <div class="panel-body">
-                <div summernote class="summernote"></div>
-            </div>
+            <li class="col-lg-6 col-md-6">
+                <label class="col-lg-3 col-md-3 control-label">通知范围：</label>
+                <div class="col-lg-9 col-md-9">
+                    <select class="form-control" name="类别">
+                        <option>全部</option>
+                        <option>政府</option>
+                        <option>学校</option>
+                        <option>企业</option>
+                    </select>
+                </div>
+            </li>
+            <li class="col-lg-6 col-md-6">
+                <label class="col-lg-3 col-md-3 control-label">通知主题</label>
+                <div class="col-lg-9 col-md-9">
+                    <input type="text" class="form-control" placeholder="请在此输入通知主题">
+                </div>
+            </li>
+        </ul>
+        </form>
+    <!--编辑器-->
+        <div class="search-box">
+            <div summernote class="summernote" placeholder="请在此输入通知正文..."></div>
         </div>
-
-    </div>
-
     </div>
 
     <div class="modal-footer">

@@ -22,13 +22,22 @@ angular
             controller: 'EquipmentCtrl'
         };
 
-        this.routes['management'] = {
-            url: '/management',
-            templateUrl: 'views/management.html',
+        this.routes['ordinary'] = {
+            url: '/ordinary',
+            templateUrl: 'views/ordinary.html',
             data: {
-                pageTitle: 'management'
+                pageTitle: 'ordinary'
             },
-            controller: 'ManagementCtrl'
+            controller: 'OrdinaryCtrl'
+        };
+
+        this.routes['senior'] = {
+            url: '/senior',
+            templateUrl: 'views/senior.html',
+            data: {
+                pageTitle: 'senior'
+            },
+            controller: 'SeniorCtrl'
         };
 
         this.routes['unusual'] = {
