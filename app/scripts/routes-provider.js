@@ -49,14 +49,15 @@ angular
             controller: 'DataCtrl'
         };
 
-        this.routes['userList'] = {
-            url: '/user/list',
-            templateUrl: 'views/user/list.html',
+        this.routes['notice'] = {
+            url: '/notice',
+            templateUrl: 'views/notice.html',
             data: {
-                pageTitle: 'userList'
+                pageTitle: 'notice'
             },
-            controller: 'UserCtrl'
+            controller: 'NoticeCtrl'
         };
+
 
         this.routes['dashboard'] = {
             url: "/dashboard",

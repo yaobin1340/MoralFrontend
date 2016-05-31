@@ -1,0 +1,131 @@
+<!-- Header -->
+<title xmlns="http://www.w3.org/1999/html">七星博士环境质量管理系统</title>
+
+<div id="header" ng-include="'views/common/header.html'"></div>
+
+<!-- Navigation -->
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper" class="ng-scope">
+
+    <div small-header="" class="small-header ng-scope">
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="dashboard" href="#/dashboard">首页</a></li>
+                        <li ng-repeat="state in $state.$current.path" ng-switch="$last || !!state.abstract" ng-class="{active: $last}" class="ng-scope active">
+                            <span ng-switch-when="true" class="ng-binding ng-scope">通知公告</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs ng-binding">
+                    通知公告
+                </h2>
+                <small class="ng-binding">Notice</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" animate-panel effect="zoomIn">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="hpanel margin-b0">
+                    <div class="panel-body border-b0">
+                        <!--搜索-->
+                        <div class="input-group">
+                            <input class="form-control" placeholder="请输入通知关键字进行搜索..." type="text">
+                            <div class="input-group-btn">
+
+                                <button class="btn w-xs btn-success"  type="button"><i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="hpanel">
+                    <div class="panel-body">
+
+                        <h5 class="management-title m-b-lg p-bottom-0">
+                            <p class="pull-left">
+                                <i class="fa fa-list text-18 pull-left"></i> 共有<span class="text-success">100</span>条记录
+                            </p>
+                            <p class="pull-right">
+                                <button class="btn btn-outline btn-danger" type="button" ng-click="openModal_notice02('lg')"><i class="fa fa-pencil"></i> <span class="bold">发布通知</span></button>
+                            </p>
+                        </h5>
+                        <div class="table-responsive project-list">
+
+                            <table class="table table-hover table-mailbox">
+                                <thead>
+                                <tr>
+                                    <td width="10%"><strong>级别</strong></td>
+                                    <td width="65%"><strong>主题</strong></td>
+                                    <td width="15%" class="text-right"><strong>日期</strong></td>
+                                    <td width="10%" ><strong>操作</strong></td>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr class="unread active">
+                                    <td><span class="btn btn-danger btn-xs font-bold">紧急</span></td>
+                                    <td><a ng-click="openModal_notice01()">题标题标题标题标题标题题1</a></td>
+                                    <td class="text-right">2016.05.11 08:00:00</td>
+                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice02('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button>
+                                        <button class="btn btn-default" ng-click="openModal_notice03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr class="unread">
+                                    <td><span class="btn btn-warning btn-xs font-bold">重要</span></td>
+                                    <td><a ng-click="openModal_notice01()">标题标题2</a></td>
+                                    <td class="text-right">2016.05.11 08:00:00</td>
+                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice02('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button><button class="btn btn-default" ng-click="openModal_notice03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="unread">
+
+                                    <td><span class="btn btn-info btn-xs font-bold">常规</span></td>
+                                    <td><a ng-click="openModal_notice01()">标题标题3</a></td>
+                                    <td class="text-right">2016.05.11 08:00:00</td>
+                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice02('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button>
+                                        <button class="btn btn-default" ng-click="openModal_notice03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                            <button class="btn btn-default">1</button>
+                            <button class="btn btn-default  active">2</button>
+                            <button class="btn btn-default">3</button>
+                            <button class="btn btn-default">4</button>
+                            <button class="btn btn-default">5</button>
+                            <button class="btn btn-default">6</button>
+                            <button class="btn btn-default">7</button>
+                            <button class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <div id="right-sidebar" ng-include="'views/common/right_sidebar.html'" class="sidebar-open" ng-show="rightSidebar"></div>
+
+    <!-- Footer -->
+    <footer class="footer" ng-include="'views/common/footer.html'"></footer>
+
+</div>

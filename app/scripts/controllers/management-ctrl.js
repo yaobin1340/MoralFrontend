@@ -9,7 +9,7 @@ angular
 		var $state = $injector.get( '$state' );
 
 
-        $scope.showSelect = 'equipment'
+        $scope.showSelect = 'management'
         $scope.openModal_ma01 = function (size) {
             var modalInstance = $modal.open({
                 templateUrl: 'views/modal/modal_ma01.html',
@@ -76,9 +76,9 @@ angular
         };
 
         function ModalInstanceCtrl ($scope, $modalInstance) {
-            $scope.showSelect = 'equipment'
+            $scope.showSelect = 'management'
 
-            $scope.equipments = ['ns0g3203jf','ns0gf203jf','nsag3203jf']
+            $scope.managements = ['ns0g3203jf','ns0gf203jf','nsag3203jf']
 
             $scope.ok = function () {
                 $modalInstance.close();
