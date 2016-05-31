@@ -27,9 +27,9 @@
         <li ui-sref-active="active">
             <a ui-sref="equipment"><i class="pe-7s-news-paper text-16"></i> <span class="nav-label">设备列表</span><span class="label label-warning pull-right">NEW</span> </a>
         </li>
-        <li ui-sref-active="active">
+        <li ng-class="{'active': $state.includes('ordinary') || $state.includes('senior')}">
             <a href="#"><i class="pe-7s-user text-16"></i> <span class="nav-label">用户管理</span><span class="fa arrow"></span> </a>
-            <ul class="nav nav-second-level" ui-sref-active="active">
+            <ul class="nav nav-second-level" ng-class="{'in': $state.includes('ordinary') || $state.includes('senior')}">
                 <li ui-sref-active="active"><a ui-sref="ordinary">普通用户</a></li>
                 <li ui-sref-active="active"><a ui-sref="senior">高级用户</a></li>
             </ul>
