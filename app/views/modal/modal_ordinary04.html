@@ -100,18 +100,17 @@
                 <li class="col-lg-12 clear">
                     <label class="control-label col-lg-2">添加设备</label>
                     <div class="col-lg-1 pull-right m-b-sm">
-                        <button class="btn btn-success pull-right" type="button"><i class="fa fa-plus"></i> <span class="bold">添加</span></button>
+                        <button class="btn btn-success pull-right" type="button" ng-click="addEquipment()"><i class="fa fa-plus"></i> <span class="bold">添加</span></button>
                     </div>
                 </li>
 
                 <li class="col-lg-12">
-                    <div class="col-lg-5 m-b-md"><input type="text" class="form-control" placeholder="请输入MAC地址"></div>
-                    <div class="col-lg-6 m-b-md"><input type="text" class="form-control" placeholder="请输入描述"></div>
-                    <div class="col-lg-1 m-b-md"><button class="btn btn-default pull-right" type="button"><i class="fa fa-trash text-danger"></i></button></div>
+                    <div ng-repeat="i in equipments">
+                        <div class="col-lg-5 m-b-md"><input type="text" class="form-control" placeholder="请输入MAC地址"></div>
+                        <div class="col-lg-6 m-b-md"><input type="text" class="form-control" placeholder="请输入描述"></div>
+                        <div class="col-lg-1 m-b-md"><button class="btn btn-default pull-right" type="button" ng-click="removeEquipment($index)"><i class="fa fa-trash text-danger"></i></button></div>
+                    </div>
 
-                    <div class="col-lg-5 m-b-md"><input type="text" class="form-control" placeholder="请输入MAC地址"></div>
-                    <div class="col-lg-6 m-b-md"><input type="text" class="form-control" placeholder="请输入描述"></div>
-                    <div class="col-lg-1 m-b-md"><button class="btn btn-default pull-right" type="button"><i class="fa fa-trash text-danger"></i></button></div>
                 </li>
             </ul>
 
