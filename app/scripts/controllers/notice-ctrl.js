@@ -59,4 +59,13 @@ angular
             };
         };
 
+        $scope.summernoteOpt = {
+            toolbar: [
+                ['headline', ['style']],
+                ['style', ['bold', 'italic', 'underline', 'superscript', 'subscript', 'strikethrough', 'clear']],
+                ['textsize', ['fontsize']],
+                ['alignment', ['ul', 'ol', 'paragraph', 'lineheight']],
+            ]
+        };
+
     });
