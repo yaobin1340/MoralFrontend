@@ -4,14 +4,23 @@
         <h4 class="modal-title">添加用户</h4>
         <small class="font-bold">Add user</small> </div>
 
-    <div class="modal-body">
+    <div class="modal-body m-t-sm">
 
         <form method="get" class="form-horizontal">
 
-
             <ul class="search-box">
 
-                <li class="col-lg-6">
+                <li class="col-lg-6 col-md-6">
+                    <label class="col-lg-2 control-label">用户</label>
+                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="请输入用户名"></div>
+                </li>
+
+                <li class="col-lg-6 col-md-6">
+                    <label class="col-lg-2 control-label">单位</label>
+                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="请输入单位名称"></div>
+                </li>
+
+                <li class="col-lg-6 col-md-6">
                     <label class="col-lg-2 control-label">类别</label>
                     <div class="col-lg-10">
                         <select class="form-control" name="类别">
@@ -21,7 +30,7 @@
                         </select>
                     </div>
                 </li>
-                <li class="col-lg-6">
+                <li class="col-lg-6 col-md-6">
                     <label class="col-lg-2 control-label">状态</label>
                     <div class="col-lg-10">
                         <select class="form-control" name="状态">
@@ -30,30 +39,27 @@
                         </select>
                     </div>
                 </li>
-            </ul>
 
-            <ul class="search-box">
-
-                <li class="col-lg-12">
-                    <label class="col-lg-1 control-label">区域</label>
-                    <div class="col-lg-5">
-                        <select class="form-control pull-right" name="省">
+                <li class="col-lg-12 col-md-12">
+                    <label class="col-lg-1 col-md-12 control-label">区域</label>
+                    <div class="col-lg-5 col-md-4">
+                        <select class="form-control" name="省">
                             <option>江苏省</option>
                             <option>option 2</option>
                             <option>option 3</option>
                             <option>option 4</option>
                         </select>
                     </div>
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="市">
+                    <div class="col-lg-3 col-md-4">
+                        <select class="form-control" name="市">
                             <option>昆山市</option>
                             <option>option 2</option>
                             <option>option 3</option>
                             <option>option 4</option>
                         </select>
                     </div>
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="区（县）">
+                    <div class="col-lg-3 col-md-4">
+                        <select class="form-control" name="区（县）">
                             <option>玉山镇</option>
                             <option>option 2</option>
                             <option>option 3</option>
@@ -62,95 +68,90 @@
                     </div>
                 </li>
 
-            </ul>
-
-            <ul class="search-box">
-
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">用户</label>
-                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="请输入用户名"></div>
+                <li class="col-lg-12 col-md-12">
+                    <label class="col-lg-1 col-md-12 control-label">位置</label>
+                    <div class="col-lg-5 col-md-6"><input type="text" class="form-control" placeholder="请输入用户纬度，如：北纬N38°39′27.97′"></div>
+                    <div class="col-lg-6 col-md-6"><input type="text" class="form-control" placeholder="请输入用户经度，如：东经E104°04′58.66′"></div>
                 </li>
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">信息</label>
-                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="请输入真实信息"></div>
+
+                <li class="col-lg-12 col-md-12">
+                    <label class="col-lg-1 col-md-12 control-label">信息</label>
+                    <div class="col-lg-11 col-md-12"><input type="text" class="form-control" placeholder="请输入用户真实信息"></div>
                 </li>
 
             </ul>
 
-            <ul class="search-box">
-
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">单位</label>
-                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="请输入单位名称"></div>
+            <ul class="search-box pe-border p-top-0 m-b-sm">
+                <li class="col-lg-12 col-md-12 border-bottom bg-light">
+                    <label class="control-label col-lg-10 col-md-9"><p class="m-t-xs"><i class="fa fa-user-plus"></i> 添加联系人</p></label>
+                    <div class="col-lg-2 col-md-3 pull-right">
+                        <button class="btn btn-success pull-right m-xs m-r-n-xxs btn-sm" type="button" ng-click="addContacts()"><i class="fa fa-plus"></i> <span class="bold">添加</span></button>
+                    </div>
                 </li>
+                <li class="col-lg-12 col-md-12">
+                    <div ng-repeat="i in contacts">
+                        <div class="col-lg-5 col-md-5">
+                            <input type="text" class="form-control" placeholder="请输入联系人姓名">
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <input type="tel" class="form-control" placeholder="请输入联系人电话">
+                        </div>
+                        <div class="col-lg-1 col-md-1"><button class="btn btn-default pull-right m-b-sm" type="button" ng-click="removeContacts($index)"><i class="fa fa-trash text-danger"></i></button><!-- 当只有一条联系人输入框时，按钮为灰色，不能删除<button class="btn btn-default pull-right m-b-md" type="button"><i class="fa fa-trash text-off"></i></button>--></div>
+                    </div>
 
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">联系</label>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control" placeholder="请输入联系人">
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="请输入联系电话">
-                    </div>
                 </li>
             </ul>
-            <div class="hr-line-dashed"></div>
 
-            <ul class="search-box">
-                <li class="col-lg-12">
-                    <label class="control-label col-lg-2">添加设备</label></li>
-
-                <li class="col-lg-4">
-
-                    <select class="form-control pull-right" name="添加设备大类别" ng-model="showSelect">
-                        <option value="area">区域</option>
-                        <option value="user">用户</option>
-
-                    </select>
-
+            <ul class="search-box pe-border p-bottom-0 p-top-0">
+                <li class="col-lg-12 col-md-12 border-bottom bg-light">
+                    <label class="control-label col-lg-10 col-md-9"><p class="m-t-xs"><i class="fa fa-cube"></i> 添加设备</p></label>
                 </li>
 
-                <li class="col-lg-8" ng-show="showSelect === 'area'">
-
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="省">
-                            <option>江苏省</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
+                <li class="col-lg-12 col-md-12">
+                    <div class="col-lg-12 col-md-12">
+                        <select class="form-control pull-right" name="添加设备大类别" ng-model="showSelect">
+                            <option value="area" selected>区域</option><option value="user">用户</option>
                         </select>
                     </div>
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="市">
-                            <option>昆山市</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                        </select>
+                    <div ng-show="showSelect === 'area'">
+
+                        <p class="col-lg-3 col-md-4">
+                            <select class="form-control pull-right" name="省">
+                                <option>江苏省</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                            </select>
+                        </p>
+                        <p class="col-lg-3 col-md-3">
+                            <select class="form-control pull-right" name="市">
+                                <option>昆山市</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                            </select>
+                        </p>
+                        <p class="col-lg-3 col-md-3">
+                            <select class="form-control pull-right" name="区（县）">
+                                <option>玉山镇</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                            </select>
+                        </p>
+
+                        <p class="col-lg-3 col-md-2">
+                            <select class="form-control pull-right" name="类别">
+                                <option>政府</option>
+                                <option>学校</option>
+                                <option>企业</option>
+                            </select>
+                        </p>
                     </div>
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="区（县）">
-                            <option>玉山镇</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="类别">
-                            <option>政府</option>
-                            <option>学校</option>
-                            <option>企业</option>
-                        </select>
-                    </div>
-
-                </li>
-
-                <li class="col-lg-8" ng-show="showSelect === 'user'">
-
-                    <div class="col-lg-12">
-                        <input type="text" class="form-control" placeholder="请输入用户（可输入多个哦）">
+                    <div ng-show="showSelect === 'user'">
+                        <p class="col-lg-12">
+                            <input type="text" class="form-control" placeholder="请输入用户（可输入多个哦）">
+                        </p>
                     </div>
 
                 </li>
@@ -163,6 +164,6 @@
 
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">关闭</button>
-        <button type="button" class="btn btn-primary"  ng-click="ok()">保存设置</button>
+        <button type="button" class="btn btn-primary"  ng-click="add()">确认添加</button>
     </div>
 </div>

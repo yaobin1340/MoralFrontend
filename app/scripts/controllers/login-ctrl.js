@@ -1,6 +1,6 @@
 angular
 	.module( 'app' )
-	.controller( 'LoginCtrl', function LoginCtrl( $scope, $injector, $rootScope) {
+	.controller('LoginCtrl', function LoginCtrl( $scope, $injector, $rootScope, $modal, sweetAlert, notify) {
 		var $http = $injector.get( '$http' );
 		var $config = $injector.get( '$config' );
 		var $timeout = $injector.get( '$timeout' );
@@ -8,17 +8,22 @@ angular
 		var $location = $injector.get('$location');
 		var $state = $injector.get( '$state' );
 
+		$scope.openModal_login = function () {
+			var modalInstance = $modal.open({
+				templateUrl: 'views/modal/modal_login.html',
+                controller: ModalInstanceCtrl
+			});
+    	};
 
-		// $scope.login = function(){
-		// 	$http.post($config.api_uri + '/login', $scope.user)
-		// 		.success(function(response){
-		// 			$session.set('auth', response)
-		// 			$session.save()
-		// 			$state.go( 'main.home' );
-		// 		})
-		// 		.error(function(response){
-		// 			console.log(response.error)
-		// 		});
-		// }
+        function ModalInstanceCtrl ($scope, $modalInstance) {
+            $scope.send = function () {
+                $modalInstance.close();
+                notify({ message: '发送成功', classes: 'alert-success', templateUrl:'views/notification/notify.html'});
+            };
 
-	});
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+        };
+
+    });

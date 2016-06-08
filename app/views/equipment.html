@@ -39,54 +39,54 @@
                 <!--搜索-->
                 <form method="get" class="form-horizontal">
 
-                    <ul class="search-box">
+                    <ul class="search-box m-b-n">
 
-                        <li class="col-lg-4">
-                            <label class="col-lg-2 control-label">编号</label>
-                            <div class="col-lg-10"> <input type="text" class="form-control"></div>
+                        <li class="col-lg-4 col-md-4">
+                            <label class="col-lg-3 control-label">编号</label>
+                            <div class="col-lg-9"> <input type="text" class="form-control" placeholder="请输入设备编号"></div>
                         </li>
 
-                        <li class="col-lg-4">
-                            <label class="col-lg-2 control-label">类别</label>
-                            <div class="col-lg-10">
+                        <li class="col-lg-4 col-md-4">
+                            <label class="col-lg-3 control-label">类别</label>
+                            <div class="col-lg-9">
                                 <select class="form-control" name="类别">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
+                                    <option>政府</option>
+                                    <option>学校</option>
+                                    <option>企业</option>
                                 </select>
                             </div>
                         </li>
 
-                        <li class="col-lg-4">
-                            <label class="col-lg-2 control-label">状态</label>
-                            <div class="col-lg-10">
+                        <li class="col-lg-4 col-md-4">
+                            <label class="col-lg-3 control-label">状态</label>
+                            <div class="col-lg-9">
                                 <select class="form-control" name="状态">
-                                    <option>已使用</option>
-                                    <option>未使用</option>
+                                    <option>启用</option>
+                                    <option>停用</option>
                                 </select>
                             </div>
                         </li>
 
-                        <li class="col-lg-4">
-                            <label class="col-lg-2 control-label">范围</label>
-                            <div class="col-lg-4">
-                                <select class="form-control pull-right" name="省">
+                        <li class="col-lg-4 col-md-12">
+                            <label class="col-lg-3 col-md-12 control-label">范围</label>
+                            <div class="col-lg-3 col-md-4">
+                                <select class="form-control" name="省">
                                     <option>江苏省</option>
                                     <option>option 2</option>
                                     <option>option 3</option>
                                     <option>option 4</option>
                                 </select>
                             </div>
-                            <div class="col-lg-3">
-                                <select class="form-control pull-right" name="市">
+                            <div class="col-lg-3 col-md-4">
+                                <select class="form-control" name="市">
                                     <option>昆山市</option>
                                     <option>option 2</option>
                                     <option>option 3</option>
                                     <option>option 4</option>
                                 </select>
                             </div>
-                            <div class="col-lg-3">
-                                <select class="form-control pull-right" name="区（县）">
+                            <div class="col-lg-3 col-md-4">
+                                <select class="form-control" name="区（县）">
                                     <option>玉山镇</option>
                                     <option>option 2</option>
                                     <option>option 3</option>
@@ -96,22 +96,20 @@
                         </li>
 
                         <li class="col-lg-4">
-                            <label class="col-lg-2 control-label">地址</label>
-                            <div class="col-lg-10"><input type="text" class="form-control"></div>
+                            <label class="col-lg-3 control-label">地址</label>
+                            <div class="col-lg-9"><input type="text" class="form-control" placeholder="请输入设备MAC地址"></div>
                         </li>
 
                         <li class="col-lg-4">
-                            <label class="col-lg-2 control-label">企业</label>
-                            <div class="col-lg-10"><input type="text" class="form-control"></div>
+                            <label class="col-lg-3 control-label">单位</label>
+                            <div class="col-lg-9"><input type="text" class="form-control" placeholder="请输入使用单位名称"></div>
                         </li>
 
-                    </ul>
-
-                    <ul class="search-box">
-                        <li class="col-lg-4">
-                            <div class="col-lg-10 col-lg-offset-2"> <button class="btn w-xs btn-success" type="button"> <i class="fa fa-search"></i> <span class="bold">搜索</span></button>
+                        <li class="col-lg-12">
+                            <div class="col-lg-11 col-lg-offset-1"> <button class="btn w-xs btn-success" type="button"> <i class="fa fa-search"></i> <span class="bold">搜索</span></button>
                                 <button class="btn w-xs btn-default" type= type="button">重置</button></div>
                         </li>
+
                     </ul>
 
                 </form>
@@ -122,27 +120,30 @@
             </div>
 
             <div class="col-lg-12">
+                <div class="panel-heading bg-light border-left border-top border-right clear">
+                    <div class="col-lg-10 p-xxs"><h5><i class="fa fa-coffee pull-left"></i> 共有<span class="text-success">100</span>条记录</h5></div>
+                    <div class="col-lg-2">
+                        <button type="button" ng-click="openModal3('lg')" class="btn btn-outline btn-danger pull-right"><i class="fa fa-plus"></i> 添加设备</button></div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
 
                 <div class="hpanel">
 
                     <div class="panel-body">
 
-                        <h5 class="equip-title m-b-lg p-bottom-0">
-                            <p class="pull-left"><i class="fa fa-list text-18 pull-left"></i> 共有<span class="text-success">100</span>条记录</p>
-                            <p class="pull-right"><button class="btn btn-outline btn-danger" type="button" ng-click="openModal3('lg')"><i class="fa fa-plus"></i> <span class="bold">添加设备</span></button></p>
-                        </h5>
-                        <div class="table-responsive project-list">
-                            <table class="table table-striped">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
                                 <thead>
                                 <tr>
-
-                                    <th width="8%">编号</th>
-                                    <th width="7%">设备状态</th>
-                                    <th width="20%">Mac地址</th>
-                                    <th width="32%">地址</th>
-                                    <th width="10%">企业</th>
-                                    <th width="8%">类别</th>
-                                    <th width="12%">操作</th>
+                                    <th>编号</th>
+                                    <th>状态</th>
+                                    <th>Mac地址</th>
+                                    <th>地址</th>
+                                    <th>企业</th>
+                                    <th>类别</th>
+                                    <th>操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>

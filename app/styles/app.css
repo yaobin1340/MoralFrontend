@@ -1,4 +1,4 @@
-body{width:100%}
+body{width:100% !important}
 #logo{float: left; width: 180px;height:56px;padding:0 !important}
 .footer{z-index:200 !important;}
 .note-editable{min-height:200px;max-height:360px;overflow-x:none;overflow-y:scroll}
@@ -7,33 +7,24 @@ body{width:100%}
     height: 52px;line-height:52px;
     padding: 0;
     width:220px}
-a:focus{outline:none}
+a:focus{outline:none!important}
 
 .user-name{font-weight:bold;font-size:14px;line-height:28px}
 
 /*-设备列表页相关-*/
-.search-box,.search-box li{overflow:hidden!important;zoom:1!important;list-style:none;padding:0;margin:0}
-.search-box{padding:8px 0 0 0}
-.search-box>li{margin-bottom:15px}
-.search-box>li>div>p{line-height:34px;height:34px;overflow: hidden}
+.search-box{border-radius:6px;list-style:none;padding:0}
+.search-box:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden}
+.search-box li{list-style:none;padding:0;margin-bottom:10px;border-radius:6px;}
+.search-box>li>div>p{padding-top:6px;overflow:hidden}
 .search-box>li>label{text-align:left!important}
-.search-box p{padding:0}
-.btn-box{padding:0 0 12px 0;margin-bottom:12px;border-bottom:1px dotted #efefff}
 
-.equip-title{width:100%;padding:10px 15px 10px 15px;overflow:hidden;zoom:1;border-bottom:1px dotted #efefff}
-.equip-title>p{line-height:36px}
-.equip-title>p>i{padding-top:10px}
-
-/*-用户管理-*/
-.management-title{width:100%;padding:10px 15px 10px 15px;overflow:hidden;zoom:1;border-bottom:1px dotted #efefff}
-.management-title>p{line-height:36px}
-.management-title>p>i{padding-top:10px}
-.list-box1>li{padding:8px 0 8px 8px;border-bottom:1px dotted #efefff}
-.list-box1>li>label{text-align:left!important}
+.search-box select,.search-box input{margin-bottom:10px!important}
+.search-box select:hover,.search-box input:hover{box-shadow:0 0 8px 0 #E0EEEE}
+.search-box select:focus,.search-box input:focus{box-shadow:0 0 10px 0 #E0FFFF}
 
 /*-数据中心-*/
 .data_i_box{width:80px;height:130px;position:relative;left:50%;margin-left:-40px}
-.data_i_box>span{position:absolute;right:0;top:0;z-index:10}
+.data_i_box>span{position:absolute;right:-4px;top:0;z-index:10}
 .data_ico{width:80px;height:80px;
     border-top-left-radius:50%;
     border-bottom-left-radius:50%;
@@ -98,20 +89,101 @@ a:focus{outline:none}
 .data_i_info{text-align:center;color:#46b8da;}
 .data_i_info>span{display:block;font-weight: bold;color:#666;font-size:16px}
 
-.data_list{list-style:none;padding:0;margin:0;overflow:hidden: ;zoom:1}
+.data_list{list-style:none;padding:6px 0 0 0;background-color:#FCFCFC;border-radius:6px;box-shadow:0 2px 6px 0 #eee}
 .data_list>li>label{text-align:left!important;line-height:34px;height:34px;overflow:hidden;}
 .data_list p{line-height:34px;height:34px;overflow: hidden}
+.data_box{border:1px solid #e8e8e8;background-color:#fcfcfc;margin:0 15px;padding:20px 0;border-radius:6px;box-shadow:0 2px 6px 0 #eee}
 
+/*-图表-*/
+.mychart{min-width:400px!important;height:260px!important}
+.highcharts-container{width:100%!important}
+.tab-content,.tab-pane.active,.statistic_highchart{width:100%!important}
+
+/*
+.tab-content,.tab-pane{box-sizing:border-box!important;overflow:hidden;zoom:1!important;width:100% !important}
+highchart{box-sizing:border-box}
+.nav-tabs{overflow:hidden;zoom:1}
+
+.highcharts-container svg{width:1000px !important}
+.highcharts-background{width:1000px !important}
+.highcharts-container clipPath{width:1000px !important}
+-*/
+
+/*-登录-*/
+.login_box{background-color:#fff;box-sizing:border-box;width:100%;height:100%;position:fixed;background:url("../images/bg01.jpg");background-size: 100% 100%}
+.login_footer{line-height:22px}
+.big_logo{background:url("../images/logo_big.png") center top no-repeat;height:425px;width:360px;display:block;margin:0 auto;position:fixed}
+.form_box{border:1px solid rgba(255,255,255,.5);padding:15px;border-radius:15px;margin-bottom:20px;box-shadow:0 6px 8px 0 rgba(189,214,215,.6)}
+.login_box h3{font-size:30px;margin-bottom:30px}
+.login_container{max-width:1003px;margin:0 auto;padding-top:8%}
+.login_container label{margin:0 0 10px 0}
+.login_container input{marign:0 0 10px 0}
+.login_container input:hover{box-shadow:0 0 8px 0 #a2cfd1}
+.login_container button{line-height:28px;border-radius:15px!important;box-shadow:0 6px 8px 0 rgba(186,190,186,.6);font-weight: bold}
+.login_container form{padding-top:20px;margin-bottom:30px}
+
+.login_container .tips{box-sizing:border-box}
+.login_container .tips p{background-color:rgba(255,255,255,.3);color:#fff;text-align:center;border-radius:20px;width:40px;height:40px;line-height:40px;overflow:hidden;margin:0 auto;position:relative}
+.login_container .tips p span,.login_container .tips p{display:block}
+
+.login_container .tips p:hover{animation:my_phone 1s ease 1 both;-webkit-animation:my_phone 1s ease 1 both;cursor:pointer}
+.login_container .tips p:hover i{position:absolute;left:15px;top:15px;animation:my_i 1s ease both;-webkit-animation:my_i 1s ease both}
+.login_container .tips p:hover span{width:210px;height:40px;position:absolute;left:45px;top:0px;animation:my_number 1s ease both}
+.login_container .tips p{animation:my_phone_out .5s both}
+
+@keyframes my_phone_out{
+    0%{width:40px}
+    5%{width:30px}
+    100%{width:40px}
+}
+
+@keyframes my_phone {
+    0%{width:40px}
+    5%{width:30px}
+    100%{width:100%;background-color:rgba(255,106,106,1)}
+}
+@-webkit-keyframes my_phone {
+    0%{width:40px}
+    5%{width:30px}
+    100%{width:100%;background-color:rgba(255,106,106,1)}
+}
+
+@keyframes my_i {
+    0%{left:50%;top:15px}
+    5%{left:55%;top:15px}
+    100%{left:25px;top:15px}
+}
+
+@-webkit-keyframes my_i {
+    0%{left:50%;top:15px}
+    5%{left:55%;top:15px}
+    100%{left:25px;top:15px}
+}
+
+@keyframes my_number{
+    0%{left:40%;opacity:0;transform:scale(0,0)}
+    5%{left:50%;transform:scale(.1,.1)}
+    100%{left:45px;;opacity:1;transform:scale(1,1)}
+}
+@-webkit-keyframes my_number{
+    0%{left:40%;opacity:0;transform:scale(0,0)}
+    5%{left:50%;-webkit-transform:scale(.1,.1)}
+    100%{left:45px;;opacity:1;-webkit-transform:scale(1,1)}
+}
 
 /*-margin和padding和border-*/
 .margin-b0{margin-bottom:0}
 .border-b0{border-bottom:none!important}
-.clear{clear:both}
+.clear:before{box-sizing:border-box}
+.clear:after{clear:both;content: '';width:0;height:0;display:block;visibility: hidden}
 .p-right-0{padding-right:0!important;}
 .p-left-0{padding-left:0!important;}
+.p-top-0{padding-top:0!important;}
 .p-bottom-0{padding-bottom:0!important;}
 
 /*-字体-*/
+.text-12{font-size:12px}
+.text-14{font-size:14px}
 .text-16{font-size:16px}
 .text-18{font-size:18px}
 .text-middle{font-size:30px}

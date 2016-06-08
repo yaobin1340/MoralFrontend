@@ -1,9 +1,8 @@
 <div id="navigation">
     <div class="profile-picture">
-        <a href="index.html">
+        <a ui-sref="dashboard">
             <img src="images/profile.jpg" class="img-circle m-b" alt="logo">
         </a>
-
 
         <div class="stats-label text-color">
             <span class="user-name">用户名称</span>
@@ -13,8 +12,7 @@
             </a>
                 <ul class="animated flipInX m-t-xs dropdown-menu" uib-dropdown-menu="">
                     <li><a ui-sref="#"><i class="pe-7s-angle-right"></i> 管理权限</a></li>
-                    <li><a ui-sref="#"><i class="pe-7s-angle-right"></i> 修改信息</a></li>
-                    <li><a ui-sref="#"><i class="pe-7s-angle-right"></i> 退出登录</a></li>
+                    <li ui-sref-active="active"><a ui-sref="login"><i class="pe-7s-angle-right"></i> 退出登录</a></li>
                 </ul>
             </div>
         </div>
@@ -24,9 +22,6 @@
         <li ui-sref-active="active">
             <a ui-sref="dashboard"><i class="pe-7s-home text-16"></i> <span class="nav-label">首页</span> <span class="label label-success pull-right">v.1</span></a>
         </li>
-        <li ui-sref-active="active">
-            <a ui-sref="equipment"><i class="pe-7s-news-paper text-16"></i> <span class="nav-label">设备列表</span><span class="label label-warning pull-right">NEW</span> </a>
-        </li>
         <li ng-class="{'active': $state.includes('ordinary') || $state.includes('senior')}">
             <a href="#"><i class="pe-7s-user text-16"></i> <span class="nav-label">用户管理</span><span class="fa arrow"></span> </a>
             <ul class="nav nav-second-level" ng-class="{'in': $state.includes('ordinary') || $state.includes('senior')}">
@@ -34,15 +29,24 @@
                 <li ui-sref-active="active"><a ui-sref="senior">高级用户</a></li>
             </ul>
         </li>
+        <li ui-sref-active="active">
+            <a ui-sref="equipment"><i class="pe-7s-news-paper text-16"></i> <span class="nav-label">设备列表</span><span class="label label-warning pull-right">NEW</span> </a>
+        </li>
+
+        <li ui-sref-active="active">
+            <a ui-sref="data"><i class="pe-7s-graph2 text-16"></i> <span class="nav-label">数据中心</span></a>
+        </li>
+
+        <li ui-sref-active="active">
+            <a ui-sref="warning"><i class="pe-7s-attention text-16"></i> <span class="nav-label">超标警报</span><span class="label label-danger pull-right">!</span> </a>
+        </li>
 
         <li ui-sref-active="active">
             <a ui-sref="unusual"><i class="pe-7s-help1 text-16"></i> <span class="nav-label">异常设备</span></a>
         </li>
+
         <li ui-sref-active="active">
-            <a ui-sref="data"><i class="pe-7s-graph2 text-16"></i> <span class="nav-label">数据中心</span></a>
-        </li>
-        <li ui-sref-active="active">
-            <a ui-sref="notice"><i class="pe-7s-note text-16"></i> <span class="nav-label">通知公告</span></a>
+            <a ui-sref="notice"><i class="pe-7s-speaker text-16"></i> <span class="nav-label">通知公告</span></a>
         </li>
     </ul>
 </div>

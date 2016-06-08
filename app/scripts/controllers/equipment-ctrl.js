@@ -8,18 +8,6 @@ angular
 		var $location = $injector.get('$location');
 		var $state = $injector.get( '$state' );
 
-
-		// $scope.login = function(){
-		// 	$http.post($config.api_uri + '/login', $scope.user)
-		// 		.success(function(response){
-		// 			$session.set('auth', response)
-		// 			$session.save()
-		// 			$state.go( 'main.home' );
-		// 		})
-		// 		.error(function(response){
-		// 			console.log(response.error)
-		// 		});
-		// }
 		$scope.openModal = function (size) {
 			var modalInstance = $modal.open({
 				templateUrl: 'views/modal/modal.html',
@@ -61,6 +49,11 @@ angular
             $scope.ok = function () {
                 $modalInstance.close();
                 notify({ message: '保存成功', classes: 'alert-success', templateUrl:'views/notification/notify.html'});
+            };
+
+            $scope.add = function () {
+                $modalInstance.close();
+                notify({ message: '添加成功', classes: 'alert-success', templateUrl:'views/notification/notify.html'});
             };
 
             $scope.cancel = function () {

@@ -4,69 +4,58 @@
       <h4 class="modal-title">修改设备信息</h4>
       <small class="font-bold">Modify device information</small> </div>
 
-    <div class="modal-body">
+    <div class="modal-body m-b-n m-t-md">
 
         <form method="get" class="form-horizontal">
 
             <ul class="search-box">
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">编号</label>
-                    <div class="col-lg-10"><p>no.215255</p></div>
+
+                <li class="col-lg-6 col-md-12">
+                    <label class="col-lg-2 control-label">单位</label>
+                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="请输入名称"></div>
                 </li>
 
-                <li class="col-lg-6">
+                <li class="col-lg-6 col-md-6">
                     <label class="col-lg-2 control-label">类别</label>
                     <div class="col-lg-10">
                         <select class="form-control" name="类别">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
+                            <option>政府</option>
+                            <option>学校</option>
+                            <option>企业</option>
                         </select>
                     </div>
                 </li>
-            </ul>
 
-            <div class="hr-line-dashed"></div>
-
-            <ul class="search-box">
-                <li class="col-lg-6">
+                <li class="col-lg-6 col-md-6">
                     <label class="col-lg-2 control-label">状态</label>
                     <div class="col-lg-10">
                         <select class="form-control" name="状态">
-                            <option>已使用</option>
-                            <option>未使用</option>
+                            <option>启用</option>
+                            <option>停用</option>
                         </select>
                     </div>
                 </li>
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">企业</label>
-                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="某某企业"></div>
-                </li>
-            </ul>
 
-            <div class="hr-line-dashed"></div>
-
-            <ul class="search-box">
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">范围</label>
-                    <div class="col-lg-4">
-                        <select class="form-control pull-right" name="省">
+                <li class="col-lg-6 col-md-12">
+                    <label class="col-lg-2 col-md-12 control-label">范围</label>
+                    <div class="col-lg-4 col-md-4">
+                        <select class="form-control" name="省">
                             <option>江苏省</option>
                             <option>option 2</option>
                             <option>option 3</option>
                             <option>option 4</option>
                         </select>
                     </div>
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="市">
+                    <div class="col-lg-3 col-md-4">
+                        <select class="form-control" name="市">
                             <option>昆山市</option>
                             <option>option 2</option>
                             <option>option 3</option>
                             <option>option 4</option>
                         </select>
                     </div>
-                    <div class="col-lg-3">
-                        <select class="form-control pull-right" name="区（县）">
+                    <div class="col-lg-3 col-md-4">
+                        <select class="form-control" name="区（县）">
                             <option>玉山镇</option>
                             <option>option 2</option>
                             <option>option 3</option>
@@ -75,14 +64,24 @@
                     </div>
                 </li>
 
-                <li class="col-lg-6">
-                    <label class="col-lg-2 control-label">地址</label>
-                    <div class="col-lg-10"><input type="text" class="form-control" placeholder="江苏省昆山市xx地"></div>
+                <li class="col-lg-12 col-md-12">
+                    <label class="col-lg-1 col-md-12 control-label">位置</label>
+                    <div class="col-lg-5 col-md-6"><input type="text" class="form-control" placeholder="请输入用户纬度，如：北纬N38°39′27.97′"></div>
+                    <div class="col-lg-6 col-md-6"><input type="text" class="form-control" placeholder="请输入用户经度，如：东经E104°04′58.66′"></div>
+                </li>
+
+                <li class="col-lg-12 col-md-12">
+                    <label class="col-lg-1 col-md-12 control-label">设备</label>
+                    <div class="col-lg-5 col-md-6"><input type="text" class="form-control" placeholder="请输入MAC地址"></div>
+                    <div class="col-lg-6 col-md-6"><input type="text" class="form-control" placeholder="请输入描述"></div>
+                </li>
+
+                <li class="col-lg-12 col-md-12">
+                    <label class="col-lg-1 col-md-12 control-label">信息</label>
+                    <div class="col-lg-11 col-md-12"><input type="text" class="form-control" placeholder="请输入用户真实信息"></div>
                 </li>
 
             </ul>
-
-            <div class="hr-line-dashed"></div>
 
         </form>
              
@@ -90,6 +89,6 @@
 
         <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">关闭</button>
-        <button type="button" class="btn btn-primary"  ng-click="ok()">保存设置</button>
+        <button type="button" class="btn btn-primary"  ng-click="ok()">保存修改</button>
         </div>
  </div>
