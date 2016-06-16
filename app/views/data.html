@@ -156,7 +156,7 @@
 
                                     <div class="row ng-scope">
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-12">
                                             <div class="hpanel hgreen">
                                                 <div class="panel-body" style="height:350px">
 
@@ -168,9 +168,10 @@
                                                             </div>
                                                         </tab>
                                                         <tab>
-                                                            <tab-heading>今日</tab-heading>
-                                                            <div><strong>Donec quam felis</strong>
-                                                                <p>2</p></div>
+                                                            <tab-heading ng-click="tt()">今日</tab-heading>
+                                                            <div>
+                                                                <highchart class="chart" config="chartConfig2" class="span9" ></highchart>
+                                                            </div>
                                                         </tab>
                                                         <tab>
                                                             <tab-heading>本周</tab-heading>
