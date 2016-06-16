@@ -24,7 +24,15 @@ angular
             });
         };
 
-        $scope.openModal_notice03 = function () {
+        $scope.openModal_notice03 = function (size) {
+            var modalInstance = $modal.open({
+                templateUrl: 'views/modal/modal_notice03.html',
+                controller: ModalInstanceCtrl,
+                size:size
+            });
+        };
+
+        $scope.openModal_notice04 = function () {
             sweetAlert.swal({
                     title: "要删除这条通知吗?",
                     text: "被删除的通知将同时从接收通知的用户列表中删除!",
@@ -49,9 +57,9 @@ angular
 
             $scope.notices = ['ns0g3203jf','ns0gf203jf','nsag3203jf']
 
-            $scope.ok = function () {
+            $scope.send = function () {
                 $modalInstance.close();
-                notify({ message: '保存成功', classes: 'alert-success', templateUrl:'views/notification/notify.html'});
+                notify({ message: '发布成功', classes: 'alert-success', templateUrl:'views/notification/notify.html'});
             };
 
             $scope.cancel = function () {

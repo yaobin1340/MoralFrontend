@@ -47,27 +47,29 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col-lg-12">
+                <div class="panel-heading bg-light border-left border-top border-right clear">
+                    <div class="col-lg-10 p-xxs"><h5><i class="fa fa-bullhorn pull-left"></i> 共有<span class="text-success">100</span>条记录</h5></div>
+                    <div class="col-lg-2"><button type="button" ng-click="openModal_notice02('lg')" class="btn btn-outline btn-danger pull-right"><i class="fa fa-plus"></i> 发布通知</button></div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+
                 <div class="hpanel">
                     <div class="panel-body">
 
-                        <h5 class="management-title m-b-lg p-bottom-0">
-                            <p class="pull-left">
-                                <i class="fa fa-list text-18 pull-left"></i> 共有<span class="text-success">100</span>条记录
-                            </p>
-                            <p class="pull-right">
-                                <button class="btn btn-outline btn-danger" type="button" ng-click="openModal_notice02('lg')"><i class="fa fa-pencil"></i> <span class="bold">发布通知</span></button>
-                            </p>
-                        </h5>
                         <div class="table-responsive project-list">
 
                             <table class="table table-hover table-mailbox">
                                 <thead>
                                 <tr>
-                                    <td width="10%"><strong>级别</strong></td>
-                                    <td width="65%"><strong>主题</strong></td>
-                                    <td width="15%" class="text-right"><strong>日期</strong></td>
-                                    <td width="10%" ><strong>操作</strong></td>
+                                    <td><strong>级别</strong></td>
+                                    <td><strong>主题</strong></td>
+                                    <td class="text-right"><strong>日期</strong></td>
+                                    <td><strong>操作</strong></td>
                                 </tr>
                                 </thead>
 
@@ -76,7 +78,7 @@
                                     <td><span class="btn btn-danger btn-xs font-bold">紧急</span></td>
                                     <td><a ng-click="openModal_notice01()">题标题标题标题标题标题题1</a></td>
                                     <td class="text-right">2016.05.11 08:00:00</td>
-                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice02('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button> <button class="btn btn-default" ng-click="openModal_notice03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice03('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button> <button class="btn btn-default" ng-click="openModal_notice04()" title="删除"><i class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
 
@@ -84,7 +86,7 @@
                                     <td><span class="btn btn-warning btn-xs font-bold">重要</span></td>
                                     <td><a ng-click="openModal_notice01()">标题标题2</a></td>
                                     <td class="text-right">2016.05.11 08:00:00</td>
-                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice02('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button> <button class="btn btn-default" ng-click="openModal_notice03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice03('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button> <button class="btn btn-default" ng-click="openModal_notice04()" title="删除"><i class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 <tr class="unread">
@@ -92,7 +94,7 @@
                                     <td><span class="btn btn-info btn-xs font-bold">常规</span></td>
                                     <td><a ng-click="openModal_notice01()">标题标题3</a></td>
                                     <td class="text-right">2016.05.11 08:00:00</td>
-                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice02('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button> <button class="btn btn-default" ng-click="openModal_notice03()" title="删除"><i class="fa fa-trash text-danger"></i></button>
+                                    <td><button class="btn btn-default" data-toggle="modal" ng-click="openModal_notice03('lg')" title="编辑"><i class="fa fa-pencil text-info"></i></button> <button class="btn btn-default" ng-click="openModal_notice04()" title="删除"><i class="fa fa-trash text-danger"></i></button>
                                     </td>
                                 </tr>
                                 </tbody>

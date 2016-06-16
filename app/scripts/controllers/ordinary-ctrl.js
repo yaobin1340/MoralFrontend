@@ -78,9 +78,11 @@ angular
         function ModalInstanceCtrl ($scope, $modalInstance) {
             $scope.showSelect = 'ordinary'
 
+            $scope.managements = ['ns0g3203jf','ns0gf203jf','nsag3203jf']
+
             $scope.equipments = [1]
 
-            $scope.managements = ['ns0g3203jf','ns0gf203jf','nsag3203jf']
+            $scope.contacts = [1]
 
             $scope.ok = function () {
                 $modalInstance.close();
@@ -98,6 +100,15 @@ angular
 
             $scope.removeEquipment = function(i){
                 $scope.equipments.splice(i, 1);
+            }
+
+            $scope.addContacts = function(){
+                maxId = Math.max.apply(null,$scope.contacts)
+                $scope.contacts.push(maxId + 1)
+            }
+
+            $scope.removeContacts = function(i){
+                $scope.contacts.splice(i, 1);
             }
         };
 

@@ -5,12 +5,12 @@ angular
         this.routes = {};
 
         this.routes['login'] = {
-            url: '/login',
+            url: '/common_app/login',
             templateUrl: 'views/common_app/login.html',
             data: {
-                pageTitle: 'Dashboard'
-            }
-            // controller: 'LoginCtrl'
+                pageTitle: 'login'
+            },
+            controller: 'LoginCtrl'
         };
 
         this.routes['equipment'] = {
@@ -47,6 +47,15 @@ angular
                 pageTitle: 'unusual'
             },
             controller: 'UnusualCtrl'
+        };
+
+        this.routes['warning'] = {
+            url: '/warning',
+            templateUrl: 'views/warning.html',
+            data: {
+                pageTitle: 'warning'
+            },
+            controller: 'WarningCtrl'
         };
 
         this.routes['data'] = {

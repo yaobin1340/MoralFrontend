@@ -80,6 +80,8 @@ angular
 
             $scope.managements = ['ns0g3203jf','ns0gf203jf','nsag3203jf']
 
+            $scope.contacts = [1]
+
             $scope.ok = function () {
                 $modalInstance.close();
                 notify({ message: '保存成功', classes: 'alert-success', templateUrl:'views/notification/notify.html'});
@@ -88,6 +90,16 @@ angular
             $scope.cancel = function () {
                 $modalInstance.dismiss('cancel');
             };
+
+            $scope.addContacts = function(){
+                maxId = Math.max.apply(null,$scope.contacts)
+                $scope.contacts.push(maxId + 1)
+            }
+
+            $scope.removeContacts = function(i){
+                $scope.contacts.splice(i, 1);
+            }
+
         };
 
     });
