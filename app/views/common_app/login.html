@@ -1,3 +1,12 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<object id="AuthIE" name="AuthIE" width="0px" height="0px"
+        codebase="DogAuth.CAB#version=2,1,0,43502"
+        classid="CLSID:05C384B0-F45D-46DB-9055-C72DC76176E3">
+</object>
 <div class="login_box">
     <div class="login_container">
 
@@ -37,9 +46,10 @@
     </div>
 </div>
 
-<script src="js/Func.js"></script>
+<script src="/app/js/Func.js"></script>
 
 <script language="javascript">
+    loadFunc()
 
     var dogNotPresent = false;
     //Callback function, if the dog has been removed the function will be called.
@@ -91,6 +101,7 @@
     //Load callback functions, insertDog() and removeDog()
     function loadFunc()
     {
+        alert('aaa');
         var objAuth;
 
         //Get object
@@ -123,132 +134,132 @@
             ;
         }
     }
-
-
-    function validateLogin()
-    {
-        var challenge = "";
-        var stat = "";
-        var objAuth = "";
-        var vmData = "";
-        var dogID = "";
-        var digest = "";
-        var scope = "<dogscope/>\n";
-        var authCode = "";
-        var name = document.getElementById("username").value;
-        var pwd = document.getElementById("password").value;
-
-        document.getElementById("password").value="";
-
-        if(pwd.length<6 || pwd.length>16)
-        {
-            reportStatus(700);
-            return false;
-        }
-
-        if(window.ActiveXObject || "ActiveXObject" in window) //IE
-        {
-            //Add onfocus event
-            var obj = document.getElementById("password");
-            if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject)
-            {	//Browser is IE 11
-                obj.addEventListener("onfocus", clearInfo, false);
-            }
-            else
-            {
-                obj.attachEvent("onfocus", clearInfo);
-            }
-        }
-
-        //Get Object
-        objAuth = getAuthObject();
-
-        //Get Auth Code
-        authCode = getAuthCode();
-
-        //Open the dog
-        stat = objAuth.Open(scope, authCode);
-        if(0 != stat)
-        {
-            reportStatus(stat);
-            return false;
-        }
-
-        //Verify the password
-        stat = objAuth.VerifyUserPin(pwd);
-        if(0 != stat)
-        {
-            objAuth.Close();
-            reportStatus(stat);
-            return false;
-        }
-
-        //Get the DogID
-        stat = objAuth.GetDogID();
-        if(0 != stat)
-        {
-            objAuth.Close();
-            reportStatus(stat);
-            return false;
-        }
-
-        //Save the DogID
-        dogID = objAuth.DogIdStr;
-        document.getElementById("dogid").value = dogID;
-
-        //Get challenge string
-        challenge = getChallenge();
-        if(-1 != challenge.indexOf("error"))
-        {
-            if(-1 != challenge.indexOf("undefined function dog_auth_get_challenge"))
-            {
-                reportStatus(1010);
-            }
-            else
-            {
-                reportStatus(1002);
-            }
-            objAuth.Close();
-            return false;
-        }
-        else if(-1 != challenge.indexOf("session_start"))
-        {
-            if(-1 != challenge.indexOf("No such file or directory"))
-            {
-                reportStatus(1011);
-            }
-            else
-            {
-                reportStatus(1002);
-            }
-            objAuth.Close();
-            return false;
-        }
-
-        //Generate digest
-        stat = objAuth.GetDigest(challenge);
-        if(0 != stat)
-        {
-            objAuth.Close();
-            reportStatus(stat);
-            return false;
-        }
-
-        digest = objAuth.DigestStr;
-        document.getElementById("response").value = digest;
-
-        //Do authenticate
-        stat = doAuth(dogID, digest);
-        if(0 != stat)
-        {
-            objAuth.Close();
-            reportStatus(stat);
-            return false;
-        }
-
-        objAuth.Close();
-        return true;
-    }
+//
+//
+//    function validateLogin()
+//    {
+//        var challenge = "";
+//        var stat = "";
+//        var objAuth = "";
+//        var vmData = "";
+//        var dogID = "";
+//        var digest = "";
+//        var scope = "<dogscope/>\n";
+//        var authCode = "";
+//        var name = document.getElementById("username").value;
+//        var pwd = document.getElementById("password").value;
+//
+//        document.getElementById("password").value="";
+//
+//        if(pwd.length<6 || pwd.length>16)
+//        {
+//            reportStatus(700);
+//            return false;
+//        }
+//
+//        if(window.ActiveXObject || "ActiveXObject" in window) //IE
+//        {
+//            //Add onfocus event
+//            var obj = document.getElementById("password");
+//            if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject)
+//            {	//Browser is IE 11
+//                obj.addEventListener("onfocus", clearInfo, false);
+//            }
+//            else
+//            {
+//                obj.attachEvent("onfocus", clearInfo);
+//            }
+//        }
+//
+//        //Get Object
+//        objAuth = getAuthObject();
+//
+//        //Get Auth Code
+//        authCode = getAuthCode();
+//
+//        //Open the dog
+//        stat = objAuth.Open(scope, authCode);
+//        if(0 != stat)
+//        {
+//            reportStatus(stat);
+//            return false;
+//        }
+//
+//        //Verify the password
+//        stat = objAuth.VerifyUserPin(pwd);
+//        if(0 != stat)
+//        {
+//            objAuth.Close();
+//            reportStatus(stat);
+//            return false;
+//        }
+//
+//        //Get the DogID
+//        stat = objAuth.GetDogID();
+//        if(0 != stat)
+//        {
+//            objAuth.Close();
+//            reportStatus(stat);
+//            return false;
+//        }
+//
+//        //Save the DogID
+//        dogID = objAuth.DogIdStr;
+//        document.getElementById("dogid").value = dogID;
+//
+//        //Get challenge string
+//        challenge = getChallenge();
+//        if(-1 != challenge.indexOf("error"))
+//        {
+//            if(-1 != challenge.indexOf("undefined function dog_auth_get_challenge"))
+//            {
+//                reportStatus(1010);
+//            }
+//            else
+//            {
+//                reportStatus(1002);
+//            }
+//            objAuth.Close();
+//            return false;
+//        }
+//        else if(-1 != challenge.indexOf("session_start"))
+//        {
+//            if(-1 != challenge.indexOf("No such file or directory"))
+//            {
+//                reportStatus(1011);
+//            }
+//            else
+//            {
+//                reportStatus(1002);
+//            }
+//            objAuth.Close();
+//            return false;
+//        }
+//
+//        //Generate digest
+//        stat = objAuth.GetDigest(challenge);
+//        if(0 != stat)
+//        {
+//            objAuth.Close();
+//            reportStatus(stat);
+//            return false;
+//        }
+//
+//        digest = objAuth.DigestStr;
+//        document.getElementById("response").value = digest;
+//
+//        //Do authenticate
+//        stat = doAuth(dogID, digest);
+//        if(0 != stat)
+//        {
+//            objAuth.Close();
+//            reportStatus(stat);
+//            return false;
+//        }
+//
+//        objAuth.Close();
+//        return true;
+//    }
 
 
 </script>
@@ -262,6 +273,7 @@
         var scope = "<dogscope/>\n";
 
         embedTag();
+        console.log(embedTag())
 
         //Get object
         objAuth = getAuthObject();
