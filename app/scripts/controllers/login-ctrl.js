@@ -26,4 +26,18 @@ angular
             };
         };
 
-    });
+		$scope.removeDog = function()
+		{
+			alert('removeDog');
+			reportStatus(7);
+		}
+
+		//Callback function, if the dog still exists the function will be called.
+		$scope.insertDog = function()
+		{
+			alert('insertDog');
+			window.location.href = "Login.php";
+		}
+
+
+	});
