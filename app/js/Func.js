@@ -5,87 +5,87 @@ Parameters: none
 Return: true or false
 Description: Validate the form for emptiness.
 ***********************************************************************************************/
-function validateRegForm()
-{
-   var regForm = window.document.RegisterForm;
-   var name = regForm.username.value;
-   var pwd = regForm.password.value;
-   var rPwd = regForm.repassword.value;
-   if(isEmpty(name))
-   {
-        //alert("Please enter your Username!");
-        reportStatus(901);
-        return false; 
-   }
-   else
-   {
-	   if(name.length < 1 || name.length > 32)
-	   {
-			//alert ("Username length should be between 1-32 characters");
-			reportStatus(902);
-			return false;
-	   }
-	   if(!isLegalCharacters(name))
-	   {
-			//alert ("Username is illegal");
-			reportStatus(903);
-			return false; 
-	   }
-   }
-   if(isEmpty(pwd))
-   {
-        //alert("Please enter your password!");
-        reportStatus(904);
-        return false; 
-   }
-   else
-   {
-	   if(pwd.length < 6 || pwd.length > 16)
-		{
-			//alert ("Password's length should be between 6-16 characters");
-			reportStatus(905);
-			return false; 
-	   }
-	   if(!isLegalCharacters(pwd))
-	   {
-			//alert ("Password is illegal");
-			reportStatus(906);
-			return false; 
-	   }
-
-   }
-   if(isEmpty(rPwd))
-   {
-        //alert("Please enter your confirm password!");
-        reportStatus(908);
-        return false; 
-   }
-   else
-   {
-	   if(rPwd.length < 6 || rPwd.length > 16)
-		{
-			//alert ("Confirm password's length should be between 6-16 characters");
-			reportStatus(909);
-			return false; 
-	   }
-	   if(!isLegalCharacters(rPwd))
-	   {
-			//alert ("Password is illegal");
-			reportStatus(910);
-			return false; 
-	   }
-   }
-   if(pwd != rPwd)
-   {
-        //alert("Passwords do not match.");
-        reportStatus(911);
-		regForm.password.value ="";
-		regForm.repassword.focus();
-        return false; 
-   }
-   
-   return true;
-}
+// function validateRegForm()
+// {
+//    var regForm = window.document.RegisterForm;
+//    var name = regForm.username.value;
+//    var pwd = regForm.password.value;
+//    var rPwd = regForm.repassword.value;
+//    if(isEmpty(name))
+//    {
+//         //alert("Please enter your Username!");
+//         reportStatus(901);
+//         return false;
+//    }
+//    else
+//    {
+// 	   if(name.length < 1 || name.length > 32)
+// 	   {
+// 			//alert ("Username length should be between 1-32 characters");
+// 			reportStatus(902);
+// 			return false;
+// 	   }
+// 	   if(!isLegalCharacters(name))
+// 	   {
+// 			//alert ("Username is illegal");
+// 			reportStatus(903);
+// 			return false;
+// 	   }
+//    }
+//    if(isEmpty(pwd))
+//    {
+//         //alert("Please enter your password!");
+//         reportStatus(904);
+//         return false;
+//    }
+//    else
+//    {
+// 	   if(pwd.length < 6 || pwd.length > 16)
+// 		{
+// 			//alert ("Password's length should be between 6-16 characters");
+// 			reportStatus(905);
+// 			return false;
+// 	   }
+// 	   if(!isLegalCharacters(pwd))
+// 	   {
+// 			//alert ("Password is illegal");
+// 			reportStatus(906);
+// 			return false;
+// 	   }
+//
+//    }
+//    if(isEmpty(rPwd))
+//    {
+//         //alert("Please enter your confirm password!");
+//         reportStatus(908);
+//         return false;
+//    }
+//    else
+//    {
+// 	   if(rPwd.length < 6 || rPwd.length > 16)
+// 		{
+// 			//alert ("Confirm password's length should be between 6-16 characters");
+// 			reportStatus(909);
+// 			return false;
+// 	   }
+// 	   if(!isLegalCharacters(rPwd))
+// 	   {
+// 			//alert ("Password is illegal");
+// 			reportStatus(910);
+// 			return false;
+// 	   }
+//    }
+//    if(pwd != rPwd)
+//    {
+//         //alert("Passwords do not match.");
+//         reportStatus(911);
+// 		regForm.password.value ="";
+// 		regForm.repassword.focus();
+//         return false;
+//    }
+//
+//    return true;
+// }
 
 /**********************************************************************************************
 Function: validateChangeForm
@@ -93,88 +93,88 @@ Parameters: none
 Return: true or false
 Description: Validate the form for emptiness.
 ***********************************************************************************************/
-function validateChangeForm()
-{
-   var cForm = window.document.ChangePinForm ;
-   var oP = cForm.oldPwd.value;
-   var nP = cForm.newPwd.value;
-   var rP = cForm.retypePwd.value;
-   
-   if(isEmpty(oP))
-   {
-        //alert("Please enter your current password!");
-        reportStatus(912);
-        return false; 
-   }
-   else
-   {
-	   if(oP.length < 6 || oP.length > 16)
-	   {
-			//alert ("Password's length should be between 6-16 characters");
-			reportStatus(905);
-			return false; 
-	   }
-	   if(!isLegalCharacters(oP))
-	   {
-			//alert ("Password is illegal");
-			reportStatus(906);
-			return false; 
-	   }
-   }
-   if(isEmpty(nP))
-   {
-        //alert("Please enter your new password!");
-        reportStatus(914);
-        return false; 
-   }
-   else
-   {
-	   if(nP.length < 6 || nP.length > 16)
-		{
-			//alert ("Password's length should be between 6-16 characters");
-			reportStatus(905);
-			return false; 
-	   }
-	   if(!isLegalCharacters(nP))
-	   {
-			//alert ("Password is illegal");
-			reportStatus(906);
-			return false; 
-	   }
-   }
-   if(isEmpty(rP))
-   {
-        //alert("Please enter your new password!");
-        reportStatus(914);
-        return false; 
-   }
-   else
-   {
-	   if(rP.length < 6 || rP.length > 16)
-		{
-			//alert ("Password's length should be between 6-16 characters");
-			reportStatus(905);
-			return false; 
-	   }
-	   if(!isLegalCharacters(rP))
-	   {
-			//alert ("Password is illegal");
-			reportStatus(906);
-			return false; 
-	   }
-   }
-   if(nP != rP)
-   {
-        //alert("Passwords do not match.");
-        reportStatus(911);
-		cForm.newPwd.value = "";
-		cForm.retypePwd.value = "";
-		cForm.newPwd.focus();
-        return false; 
-   }
-   
-   return true;
-}
+// function validateChangeForm()
+// {
+//    var cForm = window.document.ChangePinForm ;
+//    var oP = cForm.oldPwd.value;
+//    var nP = cForm.newPwd.value;
+//    var rP = cForm.retypePwd.value;
+//
+//    if(isEmpty(oP))
+//    {
+//         //alert("Please enter your current password!");
+//         reportStatus(912);
+//         return false;
+//    }
+//    else
+//    {
+// 	   if(oP.length < 6 || oP.length > 16)
+// 	   {
+// 			//alert ("Password's length should be between 6-16 characters");
+// 			reportStatus(905);
+// 			return false;
+// 	   }
+// 	   if(!isLegalCharacters(oP))
+// 	   {
+// 			//alert ("Password is illegal");
+// 			reportStatus(906);
+// 			return false;
+// 	   }
+//    }
+//    if(isEmpty(nP))
+//    {
+//         //alert("Please enter your new password!");
+//         reportStatus(914);
+//         return false;
+//    }
+//    else
+//    {
+// 	   if(nP.length < 6 || nP.length > 16)
+// 		{
+// 			//alert ("Password's length should be between 6-16 characters");
+// 			reportStatus(905);
+// 			return false;
+// 	   }
+// 	   if(!isLegalCharacters(nP))
+// 	   {
+// 			//alert ("Password is illegal");
+// 			reportStatus(906);
+// 			return false;
+// 	   }
+//    }
+//    if(isEmpty(rP))
+//    {
+//         //alert("Please enter your new password!");
+//         reportStatus(914);
+//         return false;
+//    }
+//    else
+//    {
+// 	   if(rP.length < 6 || rP.length > 16)
+// 		{
+// 			//alert ("Password's length should be between 6-16 characters");
+// 			reportStatus(905);
+// 			return false;
+// 	   }
+// 	   if(!isLegalCharacters(rP))
+// 	   {
+// 			//alert ("Password is illegal");
+// 			reportStatus(906);
+// 			return false;
+// 	   }
+//    }
+//    if(nP != rP)
+//    {
+//         //alert("Passwords do not match.");
+//         reportStatus(911);
+// 		cForm.newPwd.value = "";
+// 		cForm.retypePwd.value = "";
+// 		cForm.newPwd.focus();
+//         return false;
+//    }
+//
+//    return true;
+// }
 
 /**********************************************************************************************
 Function: isLegalCharacters
@@ -182,42 +182,42 @@ Parameters: string
 Return: true or false
 Description: Judge the string whether it is legal.
 ***********************************************************************************************/
-function isLegalCharacters(s)
-{
-	var str;
-	str = new String(s);
-	var len;
-	len = str.length;
-	var i;
-     
-	for(i=0; i < len; ++i)
-	{  //if(!((str.charAt(i) >= '0' && str.charAt(i) <= '9')))
-		if(!((str.charAt(i) >= '!' && str.charAt(i) <= '~')))
-		{   
-       		return false;
-       	}
-     }
-     return true;     
-}
+// function isLegalCharacters(s)
+// {
+// 	var str;
+// 	str = new String(s);
+// 	var len;
+// 	len = str.length;
+// 	var i;
+//
+// 	for(i=0; i < len; ++i)
+// 	{  //if(!((str.charAt(i) >= '0' && str.charAt(i) <= '9')))
+// 		if(!((str.charAt(i) >= '!' && str.charAt(i) <= '~')))
+// 		{
+//        		return false;
+//        	}
+//      }
+//      return true;
+// }
 
-function isEmpty(strValue)
-{
-	var mySting = new String(strValue);
-	var len;
-	len = mySting.length;
-	if( mySting==="" )
-	{	
-		return true;
-	}		
-	for(i=0; i < len; ++i)
-	{
-		if(mySting.charAt(i) != " ")
-		{
-			return false;
-		}
-	}
-	return true;
-}
+// function isEmpty(strValue)
+// {
+// 	var mySting = new String(strValue);
+// 	var len;
+// 	len = mySting.length;
+// 	if( mySting==="" )
+// 	{
+// 		return true;
+// 	}
+// 	for(i=0; i < len; ++i)
+// 	{
+// 		if(mySting.charAt(i) != " ")
+// 		{
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
 
 /**********************************************************************************************
 Function: getChallenge
@@ -227,7 +227,7 @@ Description: Send XMLHttpRequest get challenge.
 ***********************************************************************************************/
 function getChallenge()
 {
-	var challenge = sendRequest("GetChallge.php?challenge=getChallenge"); 
+	var challenge = sendRequest("auth/GetChallge?challenge=getChallenge");
 	return ""+challenge+"";
 }
 
@@ -240,7 +240,7 @@ Description: Send XMLHttpRequest get authCode.
 function getAuthCode()
 {	
 	var authCode;
-	authCode = sendRequest("ConfigInfo.php?data=AuthCode"); 
+	authCode = sendRequest("auth/ConfigInfo?data=AuthCode");
 	return ""+authCode+"";
 }
 
@@ -253,7 +253,7 @@ Description: Send XMLHttpRequest get VendorID.
 function getVendorID()
 {
 	var vendorID;
-	vendorID = sendRequest("ConfigInfo.php?data=VendorID");
+	vendorID = sendRequest("auth/ConfigInfo?data=VendorID");
 	return ""+vendorID+"";
 }
 
@@ -275,9 +275,9 @@ Parameters: dogID, strDigst
 Return: factor
 Description: Send XMLHttpRequest do authenticate.
 ***********************************************************************************************/
-function doAuth(dogid, strDigst)
+function doAuth(dogid, strDigst,challenge)
 {
-	var ret = sendRequest("AuthChk.php?dogid="+dogid+"&digest="+strDigst+"");   
+	var ret = sendRequest("auth/AuthChk?dogid="+dogid+"&digest="+strDigst+"&challenge="+challenge);
 	return ret;
 }
 
@@ -320,7 +320,7 @@ function sendRequest(url)
 		alert("Browser does not support HTTP Request");
 		return false;
 	}
-	httpRequest.open('GET', 'http://121.40.92.176:8088/' + url, false);
+	httpRequest.open('GET', 'http://121.40.92.176:3999/' + url, false);
 	httpRequest.send(null);
 	var xmlText = httpRequest.responseText;
 	var reg = /[^\[][^\]]*[^\]]/;
